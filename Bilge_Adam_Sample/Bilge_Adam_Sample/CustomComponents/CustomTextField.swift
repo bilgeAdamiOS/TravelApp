@@ -7,6 +7,25 @@
 
 import UIKit
 
+
+enum Font {
+    case header
+    case title
+    case desc
+    
+    var font:UIFont {
+        
+        switch self {
+        case .header:
+            return UIFont(name: "Poppins-Bold", size: 24)!
+        case .title:
+            return UIFont(name: "Poppins-SemiBold", size: 14)!
+        case .desc:
+            return UIFont(name: "Poppins-Medium", size: 12)!
+        }
+    }
+}
+
 enum SideViewStatus {
     
     case left(image:UIImage)
@@ -50,17 +69,19 @@ class CustomTextField: UITextField {
         }
     }
     
-    var fontSize:CGFloat = 12 {
-        didSet {
-            
-            self.font = UIFont(name: "AvenirNext-Regular", size: fontSize)
+    var fontType:Font = .desc {
+        
+        didSet{
+            self.font = fontType.font
         }
     }
+
 
     init(insets:UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 12)){
         self.insets = insets
         super.init(frame: .zero)
         
+        self.font = fontType.font
         let attributedString = NSAttributedString(string: "Kullanıcı adınızı giriniz", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)])
 
         self.attributedPlaceholder = attributedString
