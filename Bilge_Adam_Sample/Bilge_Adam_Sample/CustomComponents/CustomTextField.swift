@@ -7,9 +7,48 @@
 
 import UIKit
 
+enum SideViewStatus {
+    
+    case left(image:UIImage)
+    case right(image:UIImage)
+    case none
+    
+    var definedSideView:UIView? {
+        switch self {
+        case .left(let image):
+            return setSideView(icon: image)
+        case .right(let image):
+             return setSideView(icon: image)
+        case .none:
+            return nil
+        
+        }
+    }
+    
+    func setSideView(icon:UIImage? = nil)->UIView{
+        
+        let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
+        imageView.tintColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
+        imageView.image = icon
+        imageView.contentMode = .scaleAspectFit
+        
+        let sideView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        sideView.addSubview(imageView)
+        
+        return sideView
+        
+    }
+}
+
 class CustomTextField: UITextField {
 
     var insets:UIEdgeInsets
+    
+    var sideView:SideViewStatus? = nil {
+        didSet{
+            defineSideViewLocation()
+        }
+    }
     
     var fontSize:CGFloat = 12 {
         didSet {
@@ -35,6 +74,25 @@ class CustomTextField: UITextField {
         self.autocorrectionType = .no
         
     }
+    
+    
+    func defineSideViewLocation(){
+        
+        switch sideView {
+        case .left:
+            self.leftView = sideView?.definedSideView
+            self.leftViewMode = .always
+        case .right:
+            self.rightView = self.sideView?.definedSideView
+            self.rightViewMode = .always
+        case .none?:
+            return
+        default:
+            return
+        }
+        
+    }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

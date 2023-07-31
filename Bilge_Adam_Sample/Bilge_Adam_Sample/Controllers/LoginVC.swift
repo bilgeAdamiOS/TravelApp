@@ -51,17 +51,8 @@ class LoginVC: UIViewController {
         let tf = CustomTextField()
         tf.placeholder = "Adınızı Girin"
         
+        tf.sideView = .left(image: UIImage(systemName: "person.fill")!)
         
-        let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        imageView.tintColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
-        imageView.image = UIImage(systemName: "person.fill")
-        imageView.contentMode = .scaleAspectFit
-        
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        leftView.addSubview(imageView)
-        
-        tf.leftView = leftView
-        tf.leftViewMode = .always
         
         tf.delegate = self
         return tf
@@ -72,19 +63,8 @@ class LoginVC: UIViewController {
     private lazy var txtPassword:CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "Şifre giriniz"
-        
-        let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        imageView.tintColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
-        imageView.image = UIImage(systemName: "lock.fill")
-        imageView.contentMode = .scaleAspectFit
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        
-        leftView.addSubview(imageView)
-        tf.leftView = leftView
-        tf.leftViewMode = .always
-        
+        tf.sideView = .right(image: UIImage(systemName: "lock.fill")!)
         tf.delegate = self
-        
         return tf
     }()
     
