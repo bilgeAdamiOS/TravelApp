@@ -12,11 +12,15 @@ import TinyConstraints
 
 class Segmented_SwitchVC: UIViewController {
     
-    let items = ["User List", "Product List"]
+    let items = ["User List", "Product List", "Car List"]
     
     private lazy var segmented:UISegmentedControl = {
         let segment = UISegmentedControl(items: items)
         segment.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+        segment.backgroundColor = .green
+        
+        segment.selectedSegmentTintColor = .blue
+        
         return segment
     }()
     
@@ -38,11 +42,24 @@ class Segmented_SwitchVC: UIViewController {
         return b
     }()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         setupViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
+    
+    override func viewDidLayoutSubviews() {
+        print("layout")
     }
     
     private func setupViews(){
@@ -56,7 +73,9 @@ class Segmented_SwitchVC: UIViewController {
     }
     
     @objc func segmentChanged(sender:UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
+        
+        
+        
     }
     
     @objc func buttonTapped(){
