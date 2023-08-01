@@ -12,6 +12,14 @@ import TinyConstraints
 
 class Segmented_SwitchVC: UIViewController {
     
+    let items = ["User List", "Product List"]
+    
+    private lazy var segmented:UISegmentedControl = {
+        let segment = UISegmentedControl(items: items)
+        segment.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+        return segment
+    }()
+    
     private lazy var toggle:UISwitch = {
         let s = UISwitch()
         
@@ -40,9 +48,15 @@ class Segmented_SwitchVC: UIViewController {
     private func setupViews(){
         
         self.view.backgroundColor = .white
-        self.view.addSubviews(toggle,button)
+        self.view.addSubviews(toggle,
+                              segmented,
+                              button)
         
         setupLayout()
+    }
+    
+    @objc func segmentChanged(sender:UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
     }
     
     @objc func buttonTapped(){
@@ -66,6 +80,13 @@ class Segmented_SwitchVC: UIViewController {
         toggle.snp.makeConstraints({ toggle in
             toggle.top.equalTo(self.view.safeAreaLayoutGuide).offset(30)
             toggle.trailing.equalToSuperview().offset(-16)
+        })
+        
+        segmented.snp.makeConstraints({ segment in
+            segment.top.equalTo(toggle.snp.bottom).offset(30)
+            segment.leading.equalToSuperview().offset(16)
+            segment.trailing.equalToSuperview().offset(-16)
+            segment.height.equalTo(50)
         })
         
         button.snp.makeConstraints({ button in
