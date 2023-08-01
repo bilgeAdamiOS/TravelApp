@@ -28,7 +28,7 @@ class MainTabbarController: UITabBarController {
         appearance.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3023334023)
         
         
-        let vc1 = VC1()
+        let vc1 = AlertVC()
         let img = UIImage(systemName: "house")
         let selectedImg = UIImage(systemName: "house.fill")
         vc1.tabBarItem = UITabBarItem(title: "", image: img, selectedImage: selectedImg)
