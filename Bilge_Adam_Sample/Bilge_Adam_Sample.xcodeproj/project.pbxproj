@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097352A73BD2800BA63AB /* UIView+Extensions.swift */; };
+		D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097372A77ADE900BA63AB /* CurrencyTextField.swift */; };
+		D910973A2A77AF3C00BA63AB /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097392A77AF3C00BA63AB /* CurrencyVC.swift */; };
+		D910973C2A77DFE400BA63AB /* SliderSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910973B2A77DFE400BA63AB /* SliderSampleVC.swift */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		D91097352A73BD2800BA63AB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D91097372A77ADE900BA63AB /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		D91097392A77AF3C00BA63AB /* CurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
+		D910973B2A77DFE400BA63AB /* SliderSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSampleVC.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 			children = (
 				D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */,
 				D95E33022A7393EC00E00830 /* LoginVC.swift */,
+				D91097392A77AF3C00BA63AB /* CurrencyVC.swift */,
+				D910973B2A77DFE400BA63AB /* SliderSampleVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D95E33042A7394C800E00830 /* CustomTextField.swift */,
+				D91097372A77ADE900BA63AB /* CurrencyTextField.swift */,
 				D91097352A73BD2800BA63AB /* UIView+Extensions.swift */,
 			);
 			path = CustomComponents;
@@ -197,10 +206,13 @@
 			files = (
 				D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */,
 				D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */,
+				D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */,
 				D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */,
 				D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */,
 				D95E33032A7393EC00E00830 /* LoginVC.swift in Sources */,
 				D95E33052A7394C900E00830 /* CustomTextField.swift in Sources */,
+				D910973C2A77DFE400BA63AB /* SliderSampleVC.swift in Sources */,
+				D910973A2A77AF3C00BA63AB /* CurrencyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

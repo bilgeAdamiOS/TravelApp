@@ -166,6 +166,8 @@ class LoginVC: UIViewController {
     
     func setupWithSnap(){
         
+       
+        
         imgHeader.snp.makeConstraints({ make in
             make.top.equalToSuperview()
             make.leading.equalToSuperview()

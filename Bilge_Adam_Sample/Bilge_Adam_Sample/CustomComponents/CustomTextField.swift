@@ -17,7 +17,7 @@ enum Font {
         
         switch self {
         case .header:
-            return UIFont(name: "Poppins-Bold", size: 24)!
+            return UIFont(name: "Poppins-SemiBold", size: 30)!
         case .title:
             return UIFont(name: "Poppins-SemiBold", size: 14)!
         case .desc:
@@ -46,13 +46,16 @@ enum SideViewStatus {
     
     func setSideView(icon:UIImage? = nil)->UIView{
         
-        let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         imageView.tintColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
         imageView.image = icon
         imageView.contentMode = .scaleAspectFit
+    
         
-        let sideView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        let sideView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        imageView.center = sideView.center
         sideView.addSubview(imageView)
+        
         
         return sideView
         
@@ -86,7 +89,7 @@ class CustomTextField: UITextField {
 
         self.attributedPlaceholder = attributedString
         self.textColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
-        self.font = UIFont(name: "Poppins-Regular", size: self.fontSize)
+        
         self.layer.borderColor = UIColor.clear.cgColor
         self.layer.borderWidth = 0.0
         self.layer.cornerRadius = 6
