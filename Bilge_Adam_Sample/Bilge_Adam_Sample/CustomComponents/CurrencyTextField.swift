@@ -18,7 +18,7 @@ class CurrencyTextField: UITextField {
         }
     }
     
-    var fontType:Font = .desc {
+    var fontType:Font = .avenir(fontType: "Bold", size: 20) {
         
         didSet{
             self.font = fontType.font

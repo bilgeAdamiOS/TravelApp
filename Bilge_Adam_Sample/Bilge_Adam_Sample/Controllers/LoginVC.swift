@@ -50,8 +50,8 @@ class LoginVC: UIViewController {
     lazy var txtUserName: CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "Adınızı Girin"
-        
-        tf.sideView = .left(image: UIImage(systemName: "person.fill")!)
+        tf.sideView = .right(image: UIImage(systemName: "person.fill")!)
+        tf.fontType = .avenir(fontType: "Book", size: 12)
         
         
         tf.delegate = self

@@ -32,7 +32,7 @@ class CurrencyVC: UIViewController {
     private lazy var txtCurrency1:CurrencyTextField = {
         let tf = CurrencyTextField()
         tf.sideView = .left(image: UIImage(named: "turkey")!)
-        tf.fontType = .header
+       
         tf.delegate = self
         return tf
         
@@ -59,7 +59,7 @@ class CurrencyVC: UIViewController {
         let tf = CurrencyTextField()
         tf.sideView = .left(image: UIImage(named: "united-states")!)
         tf.delegate = self
-        tf.fontType = .header
+       
         
         return tf
         

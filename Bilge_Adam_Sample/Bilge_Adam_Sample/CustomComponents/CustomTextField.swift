@@ -9,19 +9,19 @@ import UIKit
 
 
 enum Font {
-    case header
-    case title
-    case desc
+    case avenir(fontType:String,size:CGFloat)
+    case poppins(fontType:String,size:CGFloat)
+    case arial(fontType:String,size:CGFloat)
     
     var font:UIFont {
         
         switch self {
-        case .header:
-            return UIFont(name: "Poppins-SemiBold", size: 30)!
-        case .title:
-            return UIFont(name: "Poppins-SemiBold", size: 14)!
-        case .desc:
-            return UIFont(name: "Poppins-Medium", size: 12)!
+        case .avenir(let type, let size):
+            return UIFont(name: "Avenir-\(type)", size: size)!
+        case .poppins(let type, let size):
+            return UIFont(name: "Poppins-\(type)", size: size)!
+        case .arial(let type, let size):
+            return UIFont(name: "Arial-Black", size: size)!
         }
     }
 }
@@ -72,7 +72,7 @@ class CustomTextField: UITextField {
         }
     }
     
-    var fontType:Font = .desc {
+    var fontType:Font = .poppins(fontType: "SemiBold", size: 12) {
         
         didSet{
             self.font = fontType.font
