@@ -21,7 +21,7 @@ class ForgotPasswordVC: UIViewController {
         tf.layer.borderWidth = 1
         tf.layer.borderColor = UIColor.black.cgColor
         let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        
+        tf.addTarget(self, action: #selector(phoneNumberMasking(_:)), for: .editingChanged)
         tf.layer.cornerRadius = 8
         tf.delegate = self
         
@@ -76,6 +76,30 @@ class ForgotPasswordVC: UIViewController {
         
         
     }
+        
+    @objc func phoneNumberMasking(_ textField: UITextField) {
+            // Remove all non-digit characters from the phone number
+        let phoneNumber = textField.text?.replacingOccurrences(of: " ", with: "") ?? ""
+
+            if phoneNumber.hasPrefix("+90") {
+                if phoneNumber.count > 3 {
+                    var maskedNumber = "+90 "
+                    let indexStartOfText = phoneNumber.index(phoneNumber.startIndex, offsetBy: 3)
+                    let remainingDigits = phoneNumber.suffix(from: indexStartOfText)
+
+                    for (index, char) in remainingDigits.enumerated() {
+                        if index == 0 || index == 3 || index == 6 || index == 8 {
+                            maskedNumber.append(" ")
+                        }
+                        maskedNumber.append(char)
+                    }
+
+                    textField.text = maskedNumber
+                }
+            } else {
+                textField.text = ""
+        }
+    }
     
     //MARK: - Add Subviews to Superview
     func setupViews(){
@@ -127,7 +151,9 @@ class ForgotPasswordVC: UIViewController {
 extension ForgotPasswordVC:UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("kullanıcı textfield input işlemini başlattı.")
+        if textField == txtPassword {
+            textField.text = "+90"
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -135,14 +161,23 @@ extension ForgotPasswordVC:UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        
+        if textField == txtPasswordValid {
+            textField.resignFirstResponder()
+        }
         self.view.endEditing(true)
         
-        print(textField.text)
+        
         return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        
+                
+        if textField == txtPassword && range.length == 0 {
+            txtPasswordValid.becomeFirstResponder()
+        }
         
         return true
         

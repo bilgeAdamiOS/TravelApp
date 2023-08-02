@@ -8,10 +8,22 @@
 import UIKit
 import TinyConstraints
 
+
+struct City {
+    var name:String
+    var states:[String]
+}
+
 class PickerVC: UIViewController {
     
     //MARK: --Picker içerisine tanımlayacağımız veri
+    
+    var data:[City] = [City(name: "Ankara", states: ["Mamak","Kızılay","Çankaya"]),
+                       City(name: "İstanbul", states: ["Kadıköy","Sarıyer","Bakırköy"])]
+    
+    var allData = [[String]]()
     let cityArray = ["İstanbul","İzmir","Ankara","Trabzon","Sakarya","Adıyaman","Adana"]
+    let stateArray = ["Kadıköy","Karşıyaka","Kızılay","Sürmene","Hendek","Kahta","Ceyhan"]
     
     //MARK: -- Picker üzerine ekleyeceğimiz ToolBar içindeki butonları tanımlar.
     let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
@@ -41,6 +53,8 @@ class PickerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.allData.append(cityArray)
+        self.allData.append(stateArray)
         self.view.backgroundColor = .white
         setupViews()
     }
@@ -52,9 +66,16 @@ class PickerVC: UIViewController {
     
     @objc func doneButtonTapped(){
         //MARK: -- PickerView'ın seçili satırının numarasını verir.
-        let selectedItem = picker.selectedRow(inComponent: 0)
-        let selectedText = cityArray[selectedItem]
-        txtCityName.text = selectedText
+        let selectedCity = picker.selectedRow(inComponent: 0)
+        let selectedState = picker.selectedRow(inComponent: 1)
+        
+        let cityName = allData[0][selectedCity]
+        let stateName = allData[1][selectedState]
+        
+        let sum = cityName + " " + stateName
+        
+        
+        txtCityName.text = sum
         self.view.endEditing(true)
     }
     
@@ -86,7 +107,18 @@ extension PickerVC:UIPickerViewDelegate {
     
     //MARK: -- PickerView içerisinde her bir satırdaki gösterilecek string veriyi tanımlayan delegate(protocol) methodu.
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        self.cityArray[row]
+        
+        return allData[component][row]
+    }
+    
+    //MARK: -- PickerView içerisinde her bir satırdaki gösterilecek attiributedstring veriyi tanımlayan delegate(protocol) methodu.
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+
+        let title = self.cityArray[row]
+        let font = UIFont(name: "Poppins-SemiBold", size: 14)!
+        let attrString = NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1) , NSAttributedString.Key.font:font] )
+
+        return attrString
     }
     
     //MARK: -- PickerView içerisinde her satır değişiminde yapılan işlem.
@@ -100,11 +132,11 @@ extension PickerVC:UIPickerViewDataSource {
     
     //MARK: -- PickerView içerisinde kaç tane sütun olacağını berlirleyen protocol methodu.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return allData.count
     }
     
     //MARK: -- PickerView içerisinde hangi sütunda kaç tane satır olacağını belirleyen protocol methodu.
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return cityArray.count
+        return allData[component].count
     }
 }
