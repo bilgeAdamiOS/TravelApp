@@ -46,7 +46,7 @@ class MainTabbarController: UITabBarController {
         vc3.tabBarItem = UITabBarItem(title: "", image: img3, selectedImage: selected3)
        
         
-        let vc4 = VC4()
+        let vc4 = PickerVC()
         let img4 = UIImage(systemName: "person")
         let selected4 = UIImage(systemName: "person.fill")
         vc4.tabBarItem = UITabBarItem(title: "", image: img4, selectedImage: selected4)

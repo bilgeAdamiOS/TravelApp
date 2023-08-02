@@ -10,6 +10,7 @@ import SnapKit
 
 class AlertVC: UIViewController {
     
+    
     private lazy var button:UIButton = {
         let b = UIButton()
         b.setTitle("Show Alert", for: .normal)
@@ -23,8 +24,6 @@ class AlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         setupViews()
         // Do any additional setup after loading the view.
     }
@@ -43,12 +42,18 @@ class AlertVC: UIViewController {
     }
     
     func showSheet(){
-        let alert = UIAlertController(title: "HATA", message: "Kullanıcı adı veya şifreniz hatalı", preferredStyle: .actionSheet)
         
-        let action = UIAlertAction(title: "Tamam", style: .cancel)
-        let action2 = UIAlertAction(title: "Yeniden Dene", style: .default)
-        alert.addAction(action)
-        alert.addAction(action2)
+        
+        let alert = UIAlertController(title: "HATA", message: "Kullanıcı adı veya şifreniz hatalı", preferredStyle: .alert)
+        
+        let retry = UIAlertAction(title: "Yeniden Dene", style: .default, handler: { action in
+            
+            self.present(ForgotPasswordVC(), animated: true)
+            
+        })
+        
+
+        alert.addAction(retry)
         
         self.present(alert, animated: true)
     }
@@ -57,10 +62,13 @@ class AlertVC: UIViewController {
     @objc func showAlert(){
         
         
+        
         showSheet()
+        
+        
     }
     
-    
+   
     private func setupViews(){
         self.view.backgroundColor = .white
         self.view.addSubview(button)

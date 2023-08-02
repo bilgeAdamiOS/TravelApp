@@ -16,7 +16,7 @@
 		D91097422A791F0500BA63AB /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097412A791F0500BA63AB /* AlertVC.swift */; };
 		D91097442A791F0B00BA63AB /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097432A791F0B00BA63AB /* VC2.swift */; };
 		D91097462A791F0C00BA63AB /* VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097452A791F0C00BA63AB /* VC3.swift */; };
-		D91097482A791F0E00BA63AB /* VC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097472A791F0E00BA63AB /* VC4.swift */; };
+		D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097472A791F0E00BA63AB /* PickerVC.swift */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -42,7 +42,7 @@
 		D91097412A791F0500BA63AB /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		D91097432A791F0B00BA63AB /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		D91097452A791F0C00BA63AB /* VC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC3.swift; sourceTree = "<group>"; };
-		D91097472A791F0E00BA63AB /* VC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC4.swift; sourceTree = "<group>"; };
+		D91097472A791F0E00BA63AB /* PickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerVC.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				D910973B2A77DFE400BA63AB /* SliderSampleVC.swift */,
 				D910973D2A78EE6B00BA63AB /* Segmented-SwitchVC.swift */,
 				D910973F2A791ECA00BA63AB /* MainTabbarController.swift */,
-				D91097472A791F0E00BA63AB /* VC4.swift */,
+				D91097472A791F0E00BA63AB /* PickerVC.swift */,
 				D91097452A791F0C00BA63AB /* VC3.swift */,
 				D91097432A791F0B00BA63AB /* VC2.swift */,
 				D91097412A791F0500BA63AB /* AlertVC.swift */,
@@ -229,7 +229,7 @@
 				D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */,
 				D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */,
 				D91097422A791F0500BA63AB /* AlertVC.swift in Sources */,
-				D91097482A791F0E00BA63AB /* VC4.swift in Sources */,
+				D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */,
 				D91097402A791ECA00BA63AB /* MainTabbarController.swift in Sources */,
 				D91097462A791F0C00BA63AB /* VC3.swift in Sources */,
 				D95E33032A7393EC00E00830 /* LoginVC.swift in Sources */,
