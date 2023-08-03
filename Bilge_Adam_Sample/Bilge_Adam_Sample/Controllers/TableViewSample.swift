@@ -9,7 +9,22 @@ import UIKit
 import SnapKit
 import TinyConstraints
 
+
+struct Member {
+    
+    var name:String
+    var surname:String
+    var cars:[String]
+    
+}
+
+
+
+
+
 class CustomCell:UITableViewCell {
+    
+   
     
     
     private lazy var lblTitle:UILabel = {
@@ -101,6 +116,11 @@ class CustomCell:UITableViewCell {
 
 class TableViewSample: UIViewController {
     
+    let memberArray = [Member(name: "Tarık", surname: "Efe", cars: ["Mercedes","BMW","Mustang"]),
+    Member(name: "Mahmut", surname: "Doğan", cars: ["Volkwagen","Audi","Camaro"]),
+    Member(name: "Şevval", surname: "Çakıroğlu", cars: ["Audi","Volvo","Tofaş"]),
+    Member(name: "Emirhan", surname: "İmrahor", cars: ["Ferrari SF90"])]
+    
     let array = ["İstanbul","Ankara", "İzmir"]
     let images = [#imageLiteral(resourceName: "united-states"), #imageLiteral(resourceName: "Apple-Logo"), #imageLiteral(resourceName: "turkey")]
     
@@ -117,6 +137,7 @@ class TableViewSample: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -154,6 +175,7 @@ extension TableViewSample:UITableViewDelegate {
         return UITableView.automaticDimension
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let name = array[indexPath.row]
@@ -165,18 +187,31 @@ extension TableViewSample:UITableViewDelegate {
 extension TableViewSample:UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
         return array.count
+       
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell else { return UITableViewCell() }
+        let section = indexPath.section
+        let row = indexPath.row
         
-        cell.configure(name: array[indexPath.row], image: images[indexPath.row])
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell else { return UITableViewCell() }
+    
+        
+        let nameObject = array[indexPath.row]
+        let imageObject = images[indexPath.row]
+        
+        cell.configure(name: nameObject, image: images[indexPath.row])
         
         
         
