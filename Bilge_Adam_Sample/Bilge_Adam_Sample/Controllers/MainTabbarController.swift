@@ -34,13 +34,13 @@ class MainTabbarController: UITabBarController {
         vc1.tabBarItem = UITabBarItem(title: "", image: img, selectedImage: selectedImg)
         
         
-        let vc2 = VC2()
+        let vc2 = TableViewDetailVC()
         let img2 = UIImage(systemName: "star")
         let selected2 = UIImage(systemName: "star.fill")
         vc2.tabBarItem = UITabBarItem(title: "", image: img2, selectedImage: selected2)
         
         
-        let vc3 = VC3()
+        let vc3 = TableViewSample()
         let img3 = UIImage(systemName: "cart")
         let selected3 = UIImage(systemName: "cart.fill")
         vc3.tabBarItem = UITabBarItem(title: "", image: img3, selectedImage: selected3)

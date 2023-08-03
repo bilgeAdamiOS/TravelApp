@@ -7,13 +7,15 @@
 
 import UIKit
 
-class VC2: UIViewController {
+class TableViewDetailVC: UIViewController {
 
+    var name:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = .blue
-        // Do any additional setup after loading the view.
+        print(name)
     }
     
 

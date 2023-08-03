@@ -21,7 +21,7 @@ class ForgotPasswordVC: UIViewController {
         tf.layer.borderWidth = 1
         tf.layer.borderColor = UIColor.black.cgColor
         let imageView = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
-        tf.addTarget(self, action: #selector(phoneNumberMasking(_:)), for: .editingChanged)
+        //tf.addTarget(self, action: #selector(phoneNumberMasking(_:)), for: .editingChanged)
         tf.layer.cornerRadius = 8
         tf.delegate = self
         
@@ -151,9 +151,9 @@ class ForgotPasswordVC: UIViewController {
 extension ForgotPasswordVC:UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == txtPassword {
-            textField.text = "+90"
-        }
+//        if textField == txtPassword {
+//            textField.text = "+90"
+//        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -175,8 +175,12 @@ extension ForgotPasswordVC:UITextFieldDelegate {
         
         
                 
-        if textField == txtPassword && range.length == 0 {
+        if textField.text?.count == 1  {
+            textField.resignFirstResponder()
+            
             txtPasswordValid.becomeFirstResponder()
+            
+            
         }
         
         return true
