@@ -18,14 +18,7 @@ struct Member {
     
 }
 
-
-
-
-
 class CustomCell:UITableViewCell {
-    
-   
-    
     
     private lazy var lblTitle:UILabel = {
         let l = UILabel()
@@ -121,6 +114,7 @@ class TableViewSample: UIViewController {
     Member(name: "Şevval", surname: "Çakıroğlu", cars: ["Audi","Volvo","Tofaş"]),
     Member(name: "Emirhan", surname: "İmrahor", cars: ["Ferrari SF90"])]
     
+    var sortedArray = [Member]()
     let array = ["İstanbul","Ankara", "İzmir"]
     let images = [#imageLiteral(resourceName: "united-states"), #imageLiteral(resourceName: "Apple-Logo"), #imageLiteral(resourceName: "turkey")]
     
@@ -128,7 +122,9 @@ class TableViewSample: UIViewController {
        let tv = UITableView()
         tv.delegate = self
         tv.dataSource = self
-        tv.backgroundColor = .white
+        tv.backgroundColor = .black
+        tv.separatorStyle = .singleLine
+        tv.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tv.rowHeight = UITableView.automaticDimension
         tv.estimatedRowHeight = 100
         tv.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
@@ -139,11 +135,18 @@ class TableViewSample: UIViewController {
         super.viewDidLoad()
         
         
+        sortedArray = memberArray.sorted { $0.name < $1.name }
+        
+        print(sortedArray)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
 
         setupView()
+    }
+    
+    private func deleteArrayElement(at row:Int){
+        print(row)
     }
     
     private func goDestinationVC(name:String){
@@ -179,12 +182,46 @@ extension TableViewSample:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let name = array[indexPath.row]
-        goDestinationVC(name: name)
+        //goDestinationVC(name: name)
         
     }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .normal, title: "Okundu", handler: { action,view,handler in
+            
+            
+            self.deleteArrayElement(at: indexPath.row)
+            
+        })
+        
+        
+        let config = UISwipeActionsConfiguration(actions: [action])
+        
+        
+        return config
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action2 = UIContextualAction(style: .destructive, title: "", handler: { action,view,handler in
+        
+            print("action2 çalıştı")
+           
+        })
+        
+        action2.image = UIImage(systemName: "xmark.bin.fill")
+        
+        let config = UISwipeActionsConfiguration(actions: [action2])
+        return config
+    }
+    
+    
 }
 
 extension TableViewSample:UITableViewDataSource {
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
