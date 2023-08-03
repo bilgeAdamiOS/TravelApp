@@ -186,8 +186,10 @@ extension TableViewSample:UITableViewDelegate {
         
     }
     
+    //MARK: -- Her bir tableviewCell içerisinde solda sağa doğru kaydırmalı buton seti açar.
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        //MARK: -- swipe menüsüne buton ekler ve aksiyonlarını tanımlar.
         let action = UIContextualAction(style: .normal, title: "Okundu", handler: { action,view,handler in
             
             
@@ -202,6 +204,8 @@ extension TableViewSample:UITableViewDelegate {
         return config
     }
     
+    
+    //MARK: -- Her bir tableviewCell içerisinde sağdan sola doğru kaydırmalı buton seti açar.
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let action2 = UIContextualAction(style: .destructive, title: "", handler: { action,view,handler in
@@ -222,12 +226,14 @@ extension TableViewSample:UITableViewDelegate {
 extension TableViewSample:UITableViewDataSource {
     
     
-    
+    //MARK: -- Kaç adet section olacağını belirtir.
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
+    
+    //MARK: -- Her bir section içerisinde kaç tane satır olacağını belirtir. 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
@@ -236,6 +242,8 @@ extension TableViewSample:UITableViewDataSource {
         
     }
     
+    
+    //MARK: -- Her bir tableView satırına eklenecek UITableViewCell'leri tanımlar.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let section = indexPath.section
