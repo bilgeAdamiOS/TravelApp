@@ -10,7 +10,10 @@ import SnapKit
 import TinyConstraints
 
 
-
+protocol AddressCellDelegate:AnyObject {
+    
+    func deleteCellRow(at indexPath:IndexPath)
+}
 
 
 class TableViewSample: UIViewController {
@@ -66,7 +69,7 @@ class TableViewSample: UIViewController {
 
     private func showAlert(message:String, for row:Int){
         
-        let alert = UIAlertController(title: "Uyarı", message: "\(message) satırını silmek istediğinizden emin misiniz?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Uyarı", message: message, preferredStyle: .alert)
         
         let doneAction = UIAlertAction(title: "Evet", style: .default, handler: { action in
             self.deleteArrayElement(at: row)
@@ -82,7 +85,7 @@ class TableViewSample: UIViewController {
     }
     
     private func deleteArrayElement(at row:Int){
-        array.remove(at: row)
+        addressArray.remove(at: row)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -118,11 +121,24 @@ extension TableViewSample:UITableViewDelegate {
     }
     
     
+    //MARK: -- TableView içerisinde hücreye basıldığında aksiyon alır.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let name = array[indexPath.row]
-        //goDestinationVC(name: name)
         
+        guard let cell = tableView.cellForRow(at: indexPath) as? AddressCell else { return }
+        
+        cell.contentView.layer.borderColor = UIColor.green.cgColor
+        cell.contentView.layer.borderWidth = 3
+        
+        
+    }
+    
+    
+    //MARK: -- TableView içerisindeki bir hücrenin seçimi kaldırıldığında aksiyon alır.
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        guard let cell = tableView.cellForRow(at: indexPath) as? AddressCell else { return }
+        cell.contentView.layer.borderWidth = 0
     }
     
     //MARK: -- Her bir tableviewCell içerisinde solda sağa doğru kaydırmalı buton seti açar.
@@ -130,9 +146,6 @@ extension TableViewSample:UITableViewDelegate {
         
         //MARK: -- swipe menüsüne buton ekler ve aksiyonlarını tanımlar.
         let action = UIContextualAction(style: .normal, title: "Okundu", handler: { action,view,handler in
-            
-            
-            
             
         })
         
@@ -191,12 +204,23 @@ extension TableViewSample:UITableViewDataSource {
         
         
         let object = addressArray[indexPath.row]
+        cell.indexPath = indexPath
         cell.configure(object: object)
-        
-        
+        cell.delegate = self
+        cell.selectionStyle = .none
         
         return cell
     }
     
     
+}
+
+
+extension TableViewSample:AddressCellDelegate {
+    
+    func deleteCellRow(at indexPath: IndexPath) {
+        
+        let object = addressArray[indexPath.row].name
+        showAlert(message: "\(object) isimli adresi silmek istediğinize emin misiniz?", for: indexPath.row)
+    }
 }

@@ -10,6 +10,9 @@ import TinyConstraints
 
 class AddressCell:UITableViewCell {
     
+    weak var delegate:AddressCellDelegate?
+    
+    public var indexPath:IndexPath?
     
     private lazy var viewsContent:UIView = {
         let v = UIView()
@@ -85,10 +88,12 @@ class AddressCell:UITableViewCell {
         return l
     }()
     
-    private lazy var lineView:UIView = {
-        let v = UIView()
-        v.backgroundColor = .black
-        return v
+    private lazy var btnDelete:UIButton = {
+        let b = UIButton()
+        b.setTitle("Sil", for: .normal)
+        b.addTarget(self, action: #selector(btnDeleteTapped), for: .touchUpInside)
+        b.setTitleColor(.blue, for: .normal)
+        return b
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -114,6 +119,13 @@ class AddressCell:UITableViewCell {
         contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
         contentView.layer.shadowOpacity = 0.2
         
+    }
+    
+    @objc func btnDeleteTapped(){
+        
+        
+        guard let indexPath = indexPath else { return }
+        delegate?.deleteCellRow(at: indexPath)
     }
     
     public func configure(object:AddressInfo) {
@@ -143,7 +155,7 @@ class AddressCell:UITableViewCell {
         
         
         contentView.backgroundColor = #colorLiteral(red: 0.9540722104, green: 0.9852410837, blue: 1, alpha: 1)
-        contentView.addSubviews(lblName,addressStack,defaultViewStack)
+        contentView.addSubviews(lblName,addressStack,defaultViewStack,btnDelete)
         
         addressStack.addArrangedSubview(lblAddress)
         addressStack.addArrangedSubview(lblStateCity)
@@ -172,6 +184,11 @@ class AddressCell:UITableViewCell {
         defaultViewStack.height(20)
         defaultViewStack.topToBottom(of: addressStack,offset: 10)
         defaultViewStack.leading(to: addressStack)
+        
+        btnDelete.bottomToSuperview(offset:-16)
+        btnDelete.trailingToSuperview(offset:16)
+        btnDelete.width(40)
+        btnDelete.height(24)
         
     }
     
