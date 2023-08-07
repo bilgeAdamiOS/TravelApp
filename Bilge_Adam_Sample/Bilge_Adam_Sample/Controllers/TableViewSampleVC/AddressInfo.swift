@@ -9,11 +9,11 @@ import Foundation
 
 
 struct AddressInfo {
-    let name: String
-    let address: String
-    let state: String
-    let city: String
-    let country: String
-    let phone: String
-    let isDefault: Bool
+    var name: String
+    var address: String
+    var state: String
+    var city: String
+    var country: String
+    var phone: String
+    var isDefault: Bool
 }

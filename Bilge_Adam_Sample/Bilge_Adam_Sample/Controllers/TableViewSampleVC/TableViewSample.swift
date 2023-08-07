@@ -9,6 +9,11 @@ import UIKit
 import SnapKit
 import TinyConstraints
 
+protocol EditDelegate:AnyObject {
+    func prensentEditPage(indexPath:IndexPath)
+    func editDataTransfer(name:String, city:String, state:String)
+}
+
 
 protocol AddressCellDelegate:AnyObject {
     
@@ -17,6 +22,11 @@ protocol AddressCellDelegate:AnyObject {
 
 
 class TableViewSample: UIViewController {
+    
+    //MARK: Closure ????
+    typealias FuncClosure = (String)->Void
+    
+    var currentIndex:IndexPath?
     
     var addressArray: [AddressInfo] = [
         AddressInfo(name: "John Doe", address: "123 Main St", state: "İstanbul", city: "Kadıköy", country: "Türkiye", phone: "555-1234", isDefault: true),
@@ -58,14 +68,35 @@ class TableViewSample: UIViewController {
         
         sortedArray = memberArray.sorted { $0.name < $1.name }
         
-        print(sortedArray)
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
 
         setupView()
+        
+        
+        
+        getDataFromRemote(name: "İsmail", age: 35, callback: { newParam in
+            
+            let newName = newParam + " " + newParam
+            print(newName)
+        })
+        
+    
     }
     
+   
+    //MARK -- Closure ????
+    func getDataFromRemote(name:String, age:Int, callback: FuncClosure) {
+        
+        let allParams = name + " " + String(age)
+        print(allParams)
+        callback(allParams)
+        
+    }
+    
+
 
     private func showAlert(message:String, for row:Int){
         
@@ -207,7 +238,12 @@ extension TableViewSample:UITableViewDataSource {
         cell.indexPath = indexPath
         cell.configure(object: object)
         cell.delegate = self
+        cell.muhbir = self
         cell.selectionStyle = .none
+
+        cell.closure = { index in
+            print(index.row)
+        }
         
         return cell
     }
@@ -223,4 +259,33 @@ extension TableViewSample:AddressCellDelegate {
         let object = addressArray[indexPath.row].name
         showAlert(message: "\(object) isimli adresi silmek istediğinize emin misiniz?", for: indexPath.row)
     }
+}
+
+extension TableViewSample:EditDelegate {
+    
+    
+    func editDataTransfer(name: String, city: String, state: String) {
+        
+        guard let index = currentIndex else { return }
+        
+        addressArray[index.row].name = name
+        addressArray[index.row].city = city
+        addressArray[index.row].state = state
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func prensentEditPage(indexPath:IndexPath) {
+        
+        self.currentIndex = indexPath
+        let vc = AlertVC()
+        vc.agent = self
+        self.present(vc, animated: true)
+    }
+    
+    
+    
+    
 }

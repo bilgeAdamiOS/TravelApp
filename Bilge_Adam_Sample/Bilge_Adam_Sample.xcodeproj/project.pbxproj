@@ -22,6 +22,8 @@
 		D91097512A7CDD9E00BA63AB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097502A7CDD9E00BA63AB /* CustomCell.swift */; };
 		D91097532A7CE64100BA63AB /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097522A7CE64100BA63AB /* AddressCell.swift */; };
 		D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097542A7CEF0400BA63AB /* AddressInfo.swift */; };
+		D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */; };
+		D910975A2A80EA3400BA63AB /* CollectionAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -53,6 +55,8 @@
 		D91097502A7CDD9E00BA63AB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D91097522A7CE64100BA63AB /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		D91097542A7CEF0400BA63AB /* AddressInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfo.swift; sourceTree = "<group>"; };
+		D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSampleVC.swift; sourceTree = "<group>"; };
+		D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAddressCell.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 			path = TableViewSampleVC;
 			sourceTree = "<group>";
 		};
+		D91097562A80E56200BA63AB /* CollectionViewSample */ = {
+			isa = PBXGroup;
+			children = (
+				D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */,
+				D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */,
+			);
+			path = CollectionViewSample;
+			sourceTree = "<group>";
+		};
 		D9277A5D2A7145210040CFB0 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 		D95E33062A7394D300E00830 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D91097562A80E56200BA63AB /* CollectionViewSample */,
 				D910974E2A7CDD6F00BA63AB /* TableViewSampleVC */,
 				D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */,
 				D95E33022A7393EC00E00830 /* LoginVC.swift */,
@@ -253,12 +267,14 @@
 				D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */,
 				D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */,
 				D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */,
+				D910975A2A80EA3400BA63AB /* CollectionAddressCell.swift in Sources */,
 				D91097532A7CE64100BA63AB /* AddressCell.swift in Sources */,
 				D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */,
 				D910974D2A7CDD4700BA63AB /* Member.swift in Sources */,
 				D91097422A791F0500BA63AB /* AlertVC.swift in Sources */,
 				D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */,
 				D91097402A791ECA00BA63AB /* MainTabbarController.swift in Sources */,
+				D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */,
 				D91097462A791F0C00BA63AB /* TableViewSample.swift in Sources */,
 				D95E33032A7393EC00E00830 /* LoginVC.swift in Sources */,
 				D95E33052A7394C900E00830 /* CustomTextField.swift in Sources */,

@@ -134,8 +134,19 @@ class LoginVC: UIViewController {
     @objc func btnSignUpTapped(){
         
         let vc = ForgotPasswordVC()
-        vc.delegate = self
+        vc.closure = { name, indis, boy in
+            print(name)
+            print(indis)
+            print(boy)
+        }
         self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let vc = ForgotPasswordVC()
+//        vc.closure = { pass in
+//            print(pass)
+//        }
+        //vc.delegate = self
+        
     }
     
     //MARK: - Add Subviews to Superview

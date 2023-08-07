@@ -11,6 +11,9 @@ import TinyConstraints
 class AddressCell:UITableViewCell {
     
     weak var delegate:AddressCellDelegate?
+    weak var muhbir:EditDelegate?
+    typealias ButtonClosure = (IndexPath)->Void
+    var closure:ButtonClosure!
     
     public var indexPath:IndexPath?
     
@@ -96,6 +99,14 @@ class AddressCell:UITableViewCell {
         return b
     }()
     
+    private lazy var btnEdit:UIButton = {
+        let b = UIButton()
+        b.setTitle("Edit", for: .normal)
+        b.addTarget(self, action: #selector(btnEditTapped), for: .touchUpInside)
+        b.setTitleColor(.blue, for: .normal)
+        return b
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -121,11 +132,21 @@ class AddressCell:UITableViewCell {
         
     }
     
+    @objc func btnEditTapped(){
+        
+        guard let muhbir = muhbir else { return }
+        guard let indexPath = indexPath else { return }
+        muhbir.prensentEditPage(indexPath: indexPath)
+    }
+    
     @objc func btnDeleteTapped(){
         
-        
         guard let indexPath = indexPath else { return }
-        delegate?.deleteCellRow(at: indexPath)
+        
+        //delegate?.deleteCellRow(at: indexPath)
+        
+        self.closure(indexPath)
+
     }
     
     public func configure(object:AddressInfo) {
@@ -155,7 +176,7 @@ class AddressCell:UITableViewCell {
         
         
         contentView.backgroundColor = #colorLiteral(red: 0.9540722104, green: 0.9852410837, blue: 1, alpha: 1)
-        contentView.addSubviews(lblName,addressStack,defaultViewStack,btnDelete)
+        contentView.addSubviews(lblName,addressStack,defaultViewStack,btnDelete,btnEdit)
         
         addressStack.addArrangedSubview(lblAddress)
         addressStack.addArrangedSubview(lblStateCity)
@@ -190,6 +211,10 @@ class AddressCell:UITableViewCell {
         btnDelete.width(40)
         btnDelete.height(24)
         
+        btnEdit.bottomToSuperview(offset:-16)
+        btnEdit.trailingToLeading(of: btnDelete,offset: -50)
+        btnEdit.width(40)
+        btnEdit.height(24)
     }
     
     

@@ -10,6 +10,7 @@ import SnapKit
 
 class AlertVC: UIViewController {
     
+    weak var agent:EditDelegate?
     
     private lazy var button:UIButton = {
         let b = UIButton()
@@ -61,9 +62,11 @@ class AlertVC: UIViewController {
     
     @objc func showAlert(){
         
+        self.dismiss(animated: true,completion: {
+            self.agent?.editDataTransfer(name: "İsmail", city: "Muğla", state: "Fethiye")
+        })
         
-        
-        showSheet()
+        //showSheet()
         
         
     }

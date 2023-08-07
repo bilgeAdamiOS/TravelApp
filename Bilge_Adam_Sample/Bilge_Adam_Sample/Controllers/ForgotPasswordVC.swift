@@ -11,6 +11,11 @@ import TinyConstraints
 
 class ForgotPasswordVC: UIViewController {
     
+    typealias LoginClosure = (String,Int,Double)->Void
+    var closure:LoginClosure!
+    
+//    typealias LoginClosure = (String)->Void
+//    var closure:LoginClosure!
     weak var delegate:DataTransferDelegate?
     
     private lazy var txtPassword:UITextField = {
@@ -70,7 +75,12 @@ class ForgotPasswordVC: UIViewController {
         let validPassword = txtPasswordValid.text
         
         if password == validPassword {
-            delegate?.backwardDataTransfer(value: password)
+            
+            
+            self.closure("Bilge Adam", 5, 3.2)
+            
+//            self.closure(password!)
+            //delegate?.backwardDataTransfer(value: password)
             self.navigationController?.popViewController(animated: true)
         }
         
@@ -175,13 +185,13 @@ extension ForgotPasswordVC:UITextFieldDelegate {
         
         
                 
-        if textField.text?.count == 1  {
-            textField.resignFirstResponder()
-            
-            txtPasswordValid.becomeFirstResponder()
-            
-            
-        }
+//        if textField.text?.count == 1  {
+//            textField.resignFirstResponder()
+//            
+//            txtPasswordValid.becomeFirstResponder()
+//            
+//            
+//        }
         
         return true
         
