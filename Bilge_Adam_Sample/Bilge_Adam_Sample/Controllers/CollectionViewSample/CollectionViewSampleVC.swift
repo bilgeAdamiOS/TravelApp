@@ -8,20 +8,54 @@
 import UIKit
 import SnapKit
 
+enum CurrentType:String {
+    case ac = "AC"
+    case dc = "DC"
+}
+
+enum Cable:String {
+    
+    case usa = "USA"
+    case eu = "EU"
+    case china = "CHINA"
+    case japan = "JAPAN"
+    case tesla = "TESLA"
+}
+
+struct ChargerStation {
+    
+    var stationName:String
+    var currentType:[CurrentType]
+    var cableType:[Cable]
+    
+}
+
 class CollectionViewSampleVC: UIViewController {
+    
+    var filterKeys = ["current":["AC","DC"],
+                      "cable":["EU","CHINA","TESLA","USA","JAPAN"]]
+    
+    var chargerStation = [
+        ChargerStation(stationName: "İzmir", currentType: [.ac,.dc], cableType: [.eu, .china, .japan]),
+        ChargerStation(stationName: "Los Angles", currentType: [.dc], cableType: [.usa, .japan]),
+        ChargerStation(stationName: "Berlin", currentType: [.ac], cableType: [.eu, .tesla])]
 
     var addressArray: [AddressInfo] = [
         AddressInfo(name: "John Doe", address: "123 Main St", state: "İstanbul", city: "Kadıköy", country: "Türkiye", phone: "555-1234", isDefault: true),
         AddressInfo(name: "Jane Smith", address: "456 Elm St", state: "Ankara", city: "Çankaya", country: "Türkiye", phone: "555-5678", isDefault: false),
         AddressInfo(name: "Alice Johnson", address: "789 Oak St", state: "İzmir", city: "Bornova", country: "Türkiye", phone: "555-9876", isDefault: false),
-        AddressInfo(name: "Bob Williams", address: "321 Pine St", state: "Bursa", city: "Osmangazi", country: "Türkiye", phone: "555-4321", isDefault: false),
-        AddressInfo(name: "Eve Brown", address: "654 Maple St", state: "Antalya", city: "Muratpaşa", country: "Türkiye", phone: "555-6789", isDefault: false),
-        AddressInfo(name: "Michael Lee", address: "987 Birch St", state: "Adana", city: "Seyhan", country: "Türkiye", phone: "555-7890", isDefault: false),
-        AddressInfo(name: "Sophia Davis", address: "246 Cedar St", state: "Eskişehir", city: "Tepebaşı", country: "Türkiye", phone: "555-2345", isDefault: false),
-        AddressInfo(name: "William Martinez", address: "135 Walnut St", state: "Konya", city: "Selçuklu", country: "Türkiye", phone: "555-8765", isDefault: false),
-        AddressInfo(name: "Olivia Johnson", address: "864 Pine St", state: "Mersin", city: "Yenişehir", country: "Türkiye", phone: "555-7654", isDefault: false),
-        AddressInfo(name: "James Wilson", address: "579 Elm St", state: "Trabzon", city: "Ortahisar", country: "Türkiye", phone: "555-5432", isDefault: false)
+        AddressInfo(name: "Bob Williams", address: "321 Pine St", state: "Bursa", city: "Osmangazi", country: "Türkiye", phone: "555-4321", isDefault: false)
     ]
+    
+    
+    private lazy var tableView:UITableView = {
+        let tv = UITableView()
+        tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tv.backgroundColor = .white
+        tv.delegate = self
+        tv.dataSource = self
+        return tv
+    }()
     
     private lazy var collectionView:UICollectionView = {
         
@@ -30,12 +64,14 @@ class CollectionViewSampleVC: UIViewController {
         layout.minimumLineSpacing = 16
         layout.minimumInteritemSpacing = 16
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        cv.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        cv.isPagingEnabled = false
+        cv.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         cv.delegate = self
         cv.dataSource = self
+        cv.showsVerticalScrollIndicator = false
+        cv.showsHorizontalScrollIndicator = false
         cv.register(CollectionAddressCell.self, forCellWithReuseIdentifier: "AddressCellItem")
         return cv
         
@@ -43,22 +79,39 @@ class CollectionViewSampleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let test = Cable.japan
+        let newArr = chargerStation.filter({ element in
+            element.cableType.contains(test)
+                
+        })
+        
+        print(newArr)
         setupViews()
     }
     
     private func setupViews(){
         
         self.view.backgroundColor = .white
-        self.view.addSubviews(collectionView)
+        self.view.addSubviews(tableView,collectionView)
         
         setupLayout()
     }
     
     private func setupLayout() {
         
+        tableView.snp.makeConstraints({ tv in
+            tv.top.equalTo(self.view.safeAreaLayoutGuide)
+            tv.leading.equalToSuperview().offset(8)
+            tv.trailing.equalToSuperview().offset(-8)
+            tv.bottom.equalTo(collectionView.snp.top).offset(-16)
+        })
+        
         collectionView.snp.makeConstraints({ cv in
-            cv.edges.equalToSuperview()
+            cv.leading.equalToSuperview()
+            cv.trailing.equalToSuperview()
+            cv.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-24)
+            cv.height.equalTo(200)
         })
     }
    
@@ -72,7 +125,7 @@ extension CollectionViewSampleVC:UICollectionViewDelegateFlowLayout {
     //MARK: -- Her bir item için ebatları belirttiğimiz layout methodu.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let size = CGSize(width: (collectionView.frame.width - 48) / 2, height: 150)
+        let size = CGSize(width: collectionView.frame.width-32, height:150)
         return size
     }
     
@@ -97,6 +150,39 @@ extension CollectionViewSampleVC:UICollectionViewDataSource {
         cell.configure(object: object)
         
         return cell
+    }
+    
+    
+}
+
+
+extension CollectionViewSampleVC:UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 61
+    }
+}
+
+extension CollectionViewSampleVC:UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+       
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = "Deneme"
+        
+        return cell
+        
     }
     
     
