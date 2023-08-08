@@ -77,6 +77,14 @@ class CollectionAddressCell: UICollectionViewCell {
         return l
     }()
     
+    private lazy var lblCableType:UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "AvenirNext-Medium", size: 14)
+        l.textColor = .black
+        l.text = "Varsayılan Teslimat Adresi"
+        return l
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -84,15 +92,23 @@ class CollectionAddressCell: UICollectionViewCell {
         setupViews()
     }
     
-    public func configure(object:AddressInfo) {
+    public func configure(object:ChargerStation) {
         
-        lblName.text = object.name
-        lblAddress.text = object.address
+        lblName.text = object.stationName
+        lblAddress.text = "Kadıköy - İstanbul"
+        
+        var strCable = ""
+        object.cableType.forEach({ item in
+            
+            strCable += "\(item.rawValue),"
+        })
+        
+        lblCableType.text = strCable
     }
     
     private func setupViews(){
         self.contentView.backgroundColor = .white
-        self.contentView.addSubviews(lblName,lblAddress)
+        self.contentView.addSubviews(lblName,lblAddress,lblCableType)
         
         setupLayout()
     }
@@ -104,6 +120,11 @@ class CollectionAddressCell: UICollectionViewCell {
         
         lblAddress.topToBottom(of: lblName,offset: 4)
         lblAddress.leadingToSuperview(offset:8)
+        
+        lblCableType.bottomToSuperview(offset:-8)
+        lblCableType.centerXToSuperview()
+        
+        
     }
     
     required init?(coder: NSCoder) {

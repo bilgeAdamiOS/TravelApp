@@ -30,16 +30,22 @@ struct ChargerStation {
     
 }
 
+struct FilterKey {
+    var current:[CurrentType]
+    var cable:[Cable]
+}
+
 class CollectionViewSampleVC: UIViewController {
     
-    var filterKeys = ["current":["AC","DC"],
-                      "cable":["EU","CHINA","TESLA","USA","JAPAN"]]
+    var filterKeys = FilterKey(current: [.ac,.dc], cable: [.china,.usa,.tesla,.japan,.eu])
+    
+    var filteredArray = [ChargerStation]()
     
     var chargerStation = [
         ChargerStation(stationName: "İzmir", currentType: [.ac,.dc], cableType: [.eu, .china, .japan]),
         ChargerStation(stationName: "Los Angles", currentType: [.dc], cableType: [.usa, .japan]),
         ChargerStation(stationName: "Berlin", currentType: [.ac], cableType: [.eu, .tesla])]
-
+    
     var addressArray: [AddressInfo] = [
         AddressInfo(name: "John Doe", address: "123 Main St", state: "İstanbul", city: "Kadıköy", country: "Türkiye", phone: "555-1234", isDefault: true),
         AddressInfo(name: "Jane Smith", address: "456 Elm St", state: "Ankara", city: "Çankaya", country: "Türkiye", phone: "555-5678", isDefault: false),
@@ -51,7 +57,7 @@ class CollectionViewSampleVC: UIViewController {
     private lazy var tableView:UITableView = {
         let tv = UITableView()
         tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tv.backgroundColor = .white
+        tv.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         tv.delegate = self
         tv.dataSource = self
         return tv
@@ -80,14 +86,23 @@ class CollectionViewSampleVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let test = Cable.japan
-        let newArr = chargerStation.filter({ element in
-            element.cableType.contains(test)
-                
-        })
-        
-        print(newArr)
         setupViews()
+        
+        setFilteredArray()
+    }
+    
+    func setFilteredArray(_ cableType:Cable? = nil){
+        
+        guard let type = cableType else {
+            self.filteredArray = chargerStation
+            return
+        }
+        
+        let filteredArray = chargerStation.filter { item in
+            item.cableType.contains(type)
+
+        }
+        self.filteredArray = filteredArray
     }
     
     private func setupViews(){
@@ -138,7 +153,7 @@ extension CollectionViewSampleVC:UICollectionViewDelegateFlowLayout {
 
 extension CollectionViewSampleVC:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return addressArray.count
+        return filteredArray.count
     }
     
     
@@ -146,7 +161,7 @@ extension CollectionViewSampleVC:UICollectionViewDataSource {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddressCellItem", for: indexPath) as? CollectionAddressCell else { return UICollectionViewCell() }
         
-        let object = addressArray[indexPath.row]
+        let object = filteredArray[indexPath.row]
         cell.configure(object: object)
         
         return cell
@@ -161,17 +176,48 @@ extension CollectionViewSampleVC:UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 61
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Akım Tipi"
+            
+        }else {
+            return "Kablo Tipi"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        if indexPath.section == 1 {
+            let item = filterKeys.cable[indexPath.row]
+            setFilteredArray(item)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+        
+        
+        
+    }
+    
 }
 
 extension CollectionViewSampleVC:UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-       
-        return 1
+        
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        if section == 0 {
+            return filterKeys.current.count
+        }else {
+            return filterKeys.cable.count
+        }
+        
     }
     
     
@@ -179,7 +225,16 @@ extension CollectionViewSampleVC:UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "Deneme"
+        cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        cell.textLabel?.textColor = .black
+        if indexPath.section == 0 {
+            let title = filterKeys.current[indexPath.row].rawValue
+            cell.textLabel?.text = title
+            
+        }else {
+            let title = filterKeys.cable[indexPath.row].rawValue
+            cell.textLabel?.text = title
+        }
         
         return cell
         
