@@ -17,13 +17,14 @@
 		D91097442A791F0B00BA63AB /* TableViewDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097432A791F0B00BA63AB /* TableViewDetailVC.swift */; };
 		D91097462A791F0C00BA63AB /* TableViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097452A791F0C00BA63AB /* TableViewSample.swift */; };
 		D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097472A791F0E00BA63AB /* PickerVC.swift */; };
-		D910974A2A7B82B600BA63AB /* CarLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097492A7B82B600BA63AB /* CarLoginVC.swift */; };
+		D910974A2A7B82B600BA63AB /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097492A7B82B600BA63AB /* ContactVC.swift */; };
 		D910974D2A7CDD4700BA63AB /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910974C2A7CDD4700BA63AB /* Member.swift */; };
 		D91097512A7CDD9E00BA63AB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097502A7CDD9E00BA63AB /* CustomCell.swift */; };
 		D91097532A7CE64100BA63AB /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097522A7CE64100BA63AB /* AddressCell.swift */; };
 		D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097542A7CEF0400BA63AB /* AddressInfo.swift */; };
 		D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */; };
 		D910975A2A80EA3400BA63AB /* CollectionAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */; };
+		D910975C2A827DB600BA63AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910975B2A827DB600BA63AB /* Extensions.swift */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -50,13 +51,14 @@
 		D91097432A791F0B00BA63AB /* TableViewDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDetailVC.swift; sourceTree = "<group>"; };
 		D91097452A791F0C00BA63AB /* TableViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSample.swift; sourceTree = "<group>"; };
 		D91097472A791F0E00BA63AB /* PickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerVC.swift; sourceTree = "<group>"; };
-		D91097492A7B82B600BA63AB /* CarLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLoginVC.swift; sourceTree = "<group>"; };
+		D91097492A7B82B600BA63AB /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		D910974C2A7CDD4700BA63AB /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		D91097502A7CDD9E00BA63AB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D91097522A7CE64100BA63AB /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		D91097542A7CEF0400BA63AB /* AddressInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfo.swift; sourceTree = "<group>"; };
 		D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSampleVC.swift; sourceTree = "<group>"; };
 		D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAddressCell.swift; sourceTree = "<group>"; };
+		D910975B2A827DB600BA63AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D95E33082A73AFC500E00830 /* Resources */,
 				D9277A742A7145220040CFB0 /* LaunchScreen.storyboard */,
 				D9277A772A7145220040CFB0 /* Info.plist */,
+				D910975B2A827DB600BA63AB /* Extensions.swift */,
 			);
 			path = Bilge_Adam_Sample;
 			sourceTree = "<group>";
@@ -151,7 +154,7 @@
 				D91097472A791F0E00BA63AB /* PickerVC.swift */,
 				D91097432A791F0B00BA63AB /* TableViewDetailVC.swift */,
 				D91097412A791F0500BA63AB /* AlertVC.swift */,
-				D91097492A7B82B600BA63AB /* CarLoginVC.swift */,
+				D91097492A7B82B600BA63AB /* ContactVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,10 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D910975C2A827DB600BA63AB /* Extensions.swift in Sources */,
 				D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */,
 				D910973E2A78EE6B00BA63AB /* Segmented-SwitchVC.swift in Sources */,
 				D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */,
-				D910974A2A7B82B600BA63AB /* CarLoginVC.swift in Sources */,
+				D910974A2A7B82B600BA63AB /* ContactVC.swift in Sources */,
 				D91097512A7CDD9E00BA63AB /* CustomCell.swift in Sources */,
 				D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */,
 				D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */,

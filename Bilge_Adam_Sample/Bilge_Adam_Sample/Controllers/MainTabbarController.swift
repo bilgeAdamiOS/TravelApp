@@ -13,9 +13,6 @@ class MainTabbarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
         UINavigationBar.appearance().prefersLargeTitles = true
         self.title = "Deneme"
         
@@ -54,6 +51,7 @@ class MainTabbarController: UITabBarController {
         
         
         self.viewControllers = [vc1,vc2,vc3,vc4]
+        
         
     }
     

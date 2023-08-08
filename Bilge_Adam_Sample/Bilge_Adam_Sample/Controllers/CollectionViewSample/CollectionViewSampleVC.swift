@@ -43,6 +43,8 @@ class CollectionViewSampleVC: UIViewController {
     
     var chargerStation = [
         ChargerStation(stationName: "İzmir", currentType: [.ac,.dc], cableType: [.eu, .china, .japan]),
+        ChargerStation(stationName: "Pekin", currentType: [.ac,.dc], cableType: [.eu, .china, .japan]),
+        ChargerStation(stationName: "Trabzon", currentType: [.ac,.dc], cableType: [.eu, .china, .japan]),
         ChargerStation(stationName: "Los Angles", currentType: [.dc], cableType: [.usa, .japan]),
         ChargerStation(stationName: "Berlin", currentType: [.ac], cableType: [.eu, .tesla])]
     
@@ -186,6 +188,18 @@ extension CollectionViewSampleVC:UITableViewDelegate {
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            
+            setFilteredArray()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
@@ -195,6 +209,7 @@ extension CollectionViewSampleVC:UITableViewDelegate {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
+            collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         }
         
         
