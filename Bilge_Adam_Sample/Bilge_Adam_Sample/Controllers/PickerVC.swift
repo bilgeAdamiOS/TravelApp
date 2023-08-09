@@ -22,7 +22,7 @@ class PickerVC: UIViewController {
                        City(name: "İstanbul", states: ["Kadıköy","Sarıyer","Bakırköy"])]
     
     var allData = [[String]]()
-    let cityArray = ["İstanbul","İzmir","Ankara","Trabzon","Sakarya","Adıyaman","Adana"]
+    let cityArray = ["İstanbul","İzmir","Ankara","İstanbul","Trabzon","Sakarya","Adıyaman","Adana"]
     let stateArray = ["Kadıköy","Karşıyaka","Kızılay","Sürmene","Hendek","Kahta","Ceyhan"]
     
     //MARK: -- Picker üzerine ekleyeceğimiz ToolBar içindeki butonları tanımlar.
@@ -57,6 +57,11 @@ class PickerVC: UIViewController {
         self.allData.append(stateArray)
         self.view.backgroundColor = .white
         setupViews()
+        
+        
+         cityArray.filter({ item in
+            item == "İstanbul"
+         })
     }
     
     //MARK: -- self.view'a tıklandığında editleme işlemini durdurur(Klavyeyi kapatır.)

@@ -21,12 +21,23 @@ class AlertVC: UIViewController {
         return b
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+
+        
+        let app = UINavigationBarAppearance()
+        app.backgroundColor = .white
+        self.navigationController?.navigationBar.scrollEdgeAppearance = app
+        
+        self.navigationController?.isNavigationBarHidden = true
+       
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViews()
-        // Do any additional setup after loading the view.
+        
     }
     
     func addAlert(){
@@ -62,9 +73,12 @@ class AlertVC: UIViewController {
     
     @objc func showAlert(){
         
-        self.dismiss(animated: true,completion: {
-            self.agent?.editDataTransfer(name: "İsmail", city: "Muğla", state: "Fethiye")
-        })
+        let vc = ContactVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        self.dismiss(animated: true,completion: {
+//            self.agent?.editDataTransfer(name: "İsmail", city: "Muğla", state: "Fethiye")
+//        })
         
         //showSheet()
         

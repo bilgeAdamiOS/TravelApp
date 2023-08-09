@@ -37,7 +37,7 @@ class SliderSampleVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.view.backgroundColor = .white
         setupViews()
         
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(tapToGesture))

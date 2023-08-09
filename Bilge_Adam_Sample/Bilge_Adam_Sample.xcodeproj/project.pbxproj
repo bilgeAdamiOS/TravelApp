@@ -25,6 +25,10 @@
 		D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */; };
 		D910975A2A80EA3400BA63AB /* CollectionAddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */; };
 		D910975C2A827DB600BA63AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910975B2A827DB600BA63AB /* Extensions.swift */; };
+		D910975F2A8376B000BA63AB /* MainDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910975E2A8376B000BA63AB /* MainDelegateVC.swift */; };
+		D91097612A8376C500BA63AB /* TargetDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097602A8376C500BA63AB /* TargetDelegateVC.swift */; };
+		D91097642A837D5200BA63AB /* MainClosureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097632A837D5200BA63AB /* MainClosureVC.swift */; };
+		D91097662A837DA200BA63AB /* TargetClosureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097652A837DA200BA63AB /* TargetClosureVC.swift */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -59,6 +63,10 @@
 		D91097572A80E59B00BA63AB /* CollectionViewSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSampleVC.swift; sourceTree = "<group>"; };
 		D91097592A80EA3400BA63AB /* CollectionAddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAddressCell.swift; sourceTree = "<group>"; };
 		D910975B2A827DB600BA63AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D910975E2A8376B000BA63AB /* MainDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDelegateVC.swift; sourceTree = "<group>"; };
+		D91097602A8376C500BA63AB /* TargetDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDelegateVC.swift; sourceTree = "<group>"; };
+		D91097632A837D5200BA63AB /* MainClosureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainClosureVC.swift; sourceTree = "<group>"; };
+		D91097652A837DA200BA63AB /* TargetClosureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetClosureVC.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,24 @@
 			path = CollectionViewSample;
 			sourceTree = "<group>";
 		};
+		D910975D2A83767100BA63AB /* DelegatePattern */ = {
+			isa = PBXGroup;
+			children = (
+				D910975E2A8376B000BA63AB /* MainDelegateVC.swift */,
+				D91097602A8376C500BA63AB /* TargetDelegateVC.swift */,
+			);
+			path = DelegatePattern;
+			sourceTree = "<group>";
+		};
+		D91097622A837D2300BA63AB /* Closure */ = {
+			isa = PBXGroup;
+			children = (
+				D91097632A837D5200BA63AB /* MainClosureVC.swift */,
+				D91097652A837DA200BA63AB /* TargetClosureVC.swift */,
+			);
+			path = Closure;
+			sourceTree = "<group>";
+		};
 		D9277A5D2A7145210040CFB0 = {
 			isa = PBXGroup;
 			children = (
@@ -129,13 +155,14 @@
 			children = (
 				D9277A692A7145210040CFB0 /* AppDelegate.swift */,
 				D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */,
+				D91097622A837D2300BA63AB /* Closure */,
+				D910975D2A83767100BA63AB /* DelegatePattern */,
 				D95E33072A7394F600E00830 /* CustomComponents */,
 				D95E33062A7394D300E00830 /* Controllers */,
 				D9277A722A7145220040CFB0 /* Assets.xcassets */,
 				D95E33082A73AFC500E00830 /* Resources */,
 				D9277A742A7145220040CFB0 /* LaunchScreen.storyboard */,
 				D9277A772A7145220040CFB0 /* Info.plist */,
-				D910975B2A827DB600BA63AB /* Extensions.swift */,
 			);
 			path = Bilge_Adam_Sample;
 			sourceTree = "<group>";
@@ -165,6 +192,7 @@
 				D95E33042A7394C800E00830 /* CustomTextField.swift */,
 				D91097372A77ADE900BA63AB /* CurrencyTextField.swift */,
 				D91097352A73BD2800BA63AB /* UIView+Extensions.swift */,
+				D910975B2A827DB600BA63AB /* Extensions.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -262,12 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D910975F2A8376B000BA63AB /* MainDelegateVC.swift in Sources */,
 				D910975C2A827DB600BA63AB /* Extensions.swift in Sources */,
 				D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */,
 				D910973E2A78EE6B00BA63AB /* Segmented-SwitchVC.swift in Sources */,
 				D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */,
 				D910974A2A7B82B600BA63AB /* ContactVC.swift in Sources */,
 				D91097512A7CDD9E00BA63AB /* CustomCell.swift in Sources */,
+				D91097662A837DA200BA63AB /* TargetClosureVC.swift in Sources */,
 				D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */,
 				D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */,
 				D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */,
@@ -279,6 +309,8 @@
 				D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */,
 				D91097402A791ECA00BA63AB /* MainTabbarController.swift in Sources */,
 				D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */,
+				D91097612A8376C500BA63AB /* TargetDelegateVC.swift in Sources */,
+				D91097642A837D5200BA63AB /* MainClosureVC.swift in Sources */,
 				D91097462A791F0C00BA63AB /* TableViewSample.swift in Sources */,
 				D95E33032A7393EC00E00830 /* LoginVC.swift in Sources */,
 				D95E33052A7394C900E00830 /* CustomTextField.swift in Sources */,

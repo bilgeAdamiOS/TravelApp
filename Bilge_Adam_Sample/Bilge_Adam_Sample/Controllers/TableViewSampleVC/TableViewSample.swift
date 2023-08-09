@@ -23,7 +23,6 @@ protocol AddressCellDelegate:AnyObject {
 
 class TableViewSample: UIViewController {
     
-    //MARK: Closure ????
     typealias FuncClosure = (String)->Void
     
     var currentIndex:IndexPath?
@@ -262,7 +261,6 @@ extension TableViewSample:AddressCellDelegate {
 }
 
 extension TableViewSample:EditDelegate {
-    
     
     func editDataTransfer(name: String, city: String, state: String) {
         

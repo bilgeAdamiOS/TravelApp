@@ -258,6 +258,27 @@ extension UIColor {
 
 }
 
+extension UINavigationBarAppearance {
+    
+    func setCustomTitle() {
+        
+        
+        titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1),
+                               NSAttributedString.Key.font: UIFont(name: "AvenirNext-Medium", size: 17)!]
+    }
+}
+
+extension UINavigationBar {
+
+    func setCustomTitle(title:String?) {
+        guard let topItem = self.topItem else { return }
+        
+        topItem.title = title
+        titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1),
+                               NSAttributedString.Key.font: UIFont(name: "AvenirNext-Medium", size: 17)!]
+    }
+}
+
 extension UIApplication {
 
     class func topViewController(base: UIViewController? = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController) -> UIViewController? {
