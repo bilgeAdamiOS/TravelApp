@@ -27,7 +27,7 @@ class APIService: APIServiceProtocol {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             let photos = try! decoder.decode(Photos.self, from: data)
-            complete( true, photos.photos, nil )
+            complete( false, photos.photos, .noNetwork )
         }
     }
     

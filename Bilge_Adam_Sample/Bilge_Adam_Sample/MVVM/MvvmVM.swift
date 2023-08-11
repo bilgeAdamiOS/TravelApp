@@ -41,11 +41,11 @@ class MvvmVM {
         
         apiService.fetchPopularPhoto { [weak self] (success,photos,err) in
             guard let this = self else { return }
-            if let _ = err {
+            if let err = err {
                 print("Alert göster")
             }else {
                 this.photoArray = photos
-                this.photoArrayClosure!()
+                callback(photos)
                 print("Allah-ü ekber vuhuuuuu: \(photos)")
             }
         }
