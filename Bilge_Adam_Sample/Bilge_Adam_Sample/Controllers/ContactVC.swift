@@ -31,9 +31,15 @@ class ContactVC: UIViewController {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
-    
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        self.title = "Trabzonspor"
+        let titleLabel = UILabel()
+        titleLabel.text = "Ortalanmış Başlık"
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        navigationItem.titleView = titleLabel
+
+        //self.title = "Trabzonspor"
         
 //        self.navigationController?.navigationBar.scrollEdgeAppearance = app
         self.navigationController?.isNavigationBarHidden = false
@@ -53,15 +59,15 @@ class ContactVC: UIViewController {
         
         
         
-        
-        let firstRightButton = UIBarButtonItem(title: "Sağa Git", style: .plain, target: self, action: #selector(btnRightButton))
-        
-        let secondRightButton = UIBarButtonItem(image: UIImage(systemName: "apple.logo"), style: .done, target: self, action: #selector(btnSecondRightTapped))
+//
+//        let firstRightButton = UIBarButtonItem(title: "Sağa Git", style: .plain, target: self, action: #selector(btnRightButton))
+//
+//        let secondRightButton = UIBarButtonItem(image: UIImage(systemName: "apple.logo"), style: .done, target: self, action: #selector(btnSecondRightTapped))
 
         
         let leftButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward.circle.fill"), style: .done, target: self, action: #selector(btnLeftTapped))
         
-        self.navigationItem.rightBarButtonItems = [firstRightButton,secondRightButton]
+//        self.navigationItem.rightBarButtonItems = [firstRightButton,secondRightButton]
         self.navigationItem.leftBarButtonItems = [leftButton]
        
         

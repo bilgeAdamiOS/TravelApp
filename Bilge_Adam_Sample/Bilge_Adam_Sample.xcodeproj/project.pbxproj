@@ -29,6 +29,14 @@
 		D91097612A8376C500BA63AB /* TargetDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097602A8376C500BA63AB /* TargetDelegateVC.swift */; };
 		D91097642A837D5200BA63AB /* MainClosureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097632A837D5200BA63AB /* MainClosureVC.swift */; };
 		D91097662A837DA200BA63AB /* TargetClosureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097652A837DA200BA63AB /* TargetClosureVC.swift */; };
+		D91097682A84B9E700BA63AB /* UserDefaultsSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097672A84B9E700BA63AB /* UserDefaultsSampleVC.swift */; };
+		D910976B2A84C9F000BA63AB /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910976A2A84C9F000BA63AB /* KeychainHelper.swift */; };
+		D910976D2A84CBFE00BA63AB /* KeychainSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910976C2A84CBFE00BA63AB /* KeychainSampleVC.swift */; };
+		D91097702A8619A000BA63AB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910976F2A8619A000BA63AB /* APIService.swift */; };
+		D91097722A8619DA00BA63AB /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = D91097712A8619DA00BA63AB /* content.json */; };
+		D91097762A861AB400BA63AB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097752A861AB400BA63AB /* Photo.swift */; };
+		D91097792A861CBE00BA63AB /* MvvmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097782A861CBE00BA63AB /* MvvmVC.swift */; };
+		D910977B2A861CDE00BA63AB /* MvvmVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910977A2A861CDE00BA63AB /* MvvmVM.swift */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -67,6 +75,14 @@
 		D91097602A8376C500BA63AB /* TargetDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDelegateVC.swift; sourceTree = "<group>"; };
 		D91097632A837D5200BA63AB /* MainClosureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainClosureVC.swift; sourceTree = "<group>"; };
 		D91097652A837DA200BA63AB /* TargetClosureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetClosureVC.swift; sourceTree = "<group>"; };
+		D91097672A84B9E700BA63AB /* UserDefaultsSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSampleVC.swift; sourceTree = "<group>"; };
+		D910976A2A84C9F000BA63AB /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		D910976C2A84CBFE00BA63AB /* KeychainSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSampleVC.swift; sourceTree = "<group>"; };
+		D910976F2A8619A000BA63AB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D91097712A8619DA00BA63AB /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		D91097752A861AB400BA63AB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		D91097782A861CBE00BA63AB /* MvvmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmVC.swift; sourceTree = "<group>"; };
+		D910977A2A861CDE00BA63AB /* MvvmVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmVM.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +150,34 @@
 			path = Closure;
 			sourceTree = "<group>";
 		};
+		D91097692A84C9D800BA63AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D910976A2A84C9F000BA63AB /* KeychainHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D910976E2A86198100BA63AB /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				D91097732A8619DF00BA63AB /* APIService */,
+				D91097752A861AB400BA63AB /* Photo.swift */,
+				D91097782A861CBE00BA63AB /* MvvmVC.swift */,
+				D910977A2A861CDE00BA63AB /* MvvmVM.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		D91097732A8619DF00BA63AB /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				D91097712A8619DA00BA63AB /* content.json */,
+				D910976F2A8619A000BA63AB /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		D9277A5D2A7145210040CFB0 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +199,8 @@
 			children = (
 				D9277A692A7145210040CFB0 /* AppDelegate.swift */,
 				D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */,
+				D910976E2A86198100BA63AB /* MVVM */,
+				D91097692A84C9D800BA63AB /* Utils */,
 				D91097622A837D2300BA63AB /* Closure */,
 				D910975D2A83767100BA63AB /* DelegatePattern */,
 				D95E33072A7394F600E00830 /* CustomComponents */,
@@ -182,6 +228,8 @@
 				D91097432A791F0B00BA63AB /* TableViewDetailVC.swift */,
 				D91097412A791F0500BA63AB /* AlertVC.swift */,
 				D91097492A7B82B600BA63AB /* ContactVC.swift */,
+				D91097672A84B9E700BA63AB /* UserDefaultsSampleVC.swift */,
+				D910976C2A84CBFE00BA63AB /* KeychainSampleVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91097722A8619DA00BA63AB /* content.json in Resources */,
 				D95E330D2A73B04600E00830 /* Poppins-Medium.ttf in Resources */,
 				D9277A762A7145220040CFB0 /* LaunchScreen.storyboard in Resources */,
 				D95E330F2A73B04600E00830 /* Poppins-Bold.ttf in Resources */,
@@ -292,17 +341,23 @@
 			files = (
 				D910975F2A8376B000BA63AB /* MainDelegateVC.swift in Sources */,
 				D910975C2A827DB600BA63AB /* Extensions.swift in Sources */,
+				D910976B2A84C9F000BA63AB /* KeychainHelper.swift in Sources */,
 				D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */,
+				D910976D2A84CBFE00BA63AB /* KeychainSampleVC.swift in Sources */,
 				D910973E2A78EE6B00BA63AB /* Segmented-SwitchVC.swift in Sources */,
 				D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */,
 				D910974A2A7B82B600BA63AB /* ContactVC.swift in Sources */,
 				D91097512A7CDD9E00BA63AB /* CustomCell.swift in Sources */,
+				D91097682A84B9E700BA63AB /* UserDefaultsSampleVC.swift in Sources */,
 				D91097662A837DA200BA63AB /* TargetClosureVC.swift in Sources */,
 				D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */,
+				D910977B2A861CDE00BA63AB /* MvvmVM.swift in Sources */,
 				D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */,
+				D91097792A861CBE00BA63AB /* MvvmVC.swift in Sources */,
 				D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */,
 				D910975A2A80EA3400BA63AB /* CollectionAddressCell.swift in Sources */,
 				D91097532A7CE64100BA63AB /* AddressCell.swift in Sources */,
+				D91097762A861AB400BA63AB /* Photo.swift in Sources */,
 				D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */,
 				D910974D2A7CDD4700BA63AB /* Member.swift in Sources */,
 				D91097422A791F0500BA63AB /* AlertVC.swift in Sources */,
@@ -313,6 +368,7 @@
 				D91097642A837D5200BA63AB /* MainClosureVC.swift in Sources */,
 				D91097462A791F0C00BA63AB /* TableViewSample.swift in Sources */,
 				D95E33032A7393EC00E00830 /* LoginVC.swift in Sources */,
+				D91097702A8619A000BA63AB /* APIService.swift in Sources */,
 				D95E33052A7394C900E00830 /* CustomTextField.swift in Sources */,
 				D910973C2A77DFE400BA63AB /* SliderSampleVC.swift in Sources */,
 				D91097442A791F0B00BA63AB /* TableViewDetailVC.swift in Sources */,

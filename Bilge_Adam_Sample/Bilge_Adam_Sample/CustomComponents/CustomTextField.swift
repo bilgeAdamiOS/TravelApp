@@ -80,7 +80,8 @@ class CustomTextField: UITextField {
     }
 
 
-    init(insets:UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 12)){
+    init( insets:UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 12)){
+    
         self.insets = insets
         super.init(frame: .zero)
         

@@ -12,6 +12,8 @@ class AlertVC: UIViewController {
     
     weak var agent:EditDelegate?
     
+    let userDefault = UserDefaults.standard
+    
     private lazy var button:UIButton = {
         let b = UIButton()
         b.setTitle("Show Alert", for: .normal)
@@ -36,6 +38,9 @@ class AlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        print(userDefault.string(forKey: "access-token"))
+        
         setupViews()
         
     }
