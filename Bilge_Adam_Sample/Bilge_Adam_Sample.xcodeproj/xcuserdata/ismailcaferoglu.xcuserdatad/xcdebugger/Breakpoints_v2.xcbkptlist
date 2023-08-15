@@ -563,48 +563,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1B10FC7F-FB36-411D-BBCE-B72C587856B0"
+            uuid = "BB3459BD-4B74-47C9-8095-BED265B44818"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/Controllers/TESTVC.swift"
+            filePath = "Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "readFromUD(type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2E9B4B2-E3E7-43CC-AAD1-CAB15CB179C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "readFromUD(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A2E9B4B2-E3E7-43CC-AAD1-CAB15CB179C9 - e4c5ec5f804a0670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "A2E9B4B2-E3E7-43CC-AAD1-CAB15CB179C9 - e4c5ec5f804a0670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "744">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BB634B1-CC01-4F98-9C43-F3BAAF1C9F15"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/Controllers/AlertVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D815CB23-7AB0-465F-B7AA-6DAA3D6790EA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/Controllers/TESTVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "fetchData(from:parameters:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "29ECF257-9452-425B-9AA8-3E887968B091"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/Controllers/TESTVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "fetchData(from:parameters:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

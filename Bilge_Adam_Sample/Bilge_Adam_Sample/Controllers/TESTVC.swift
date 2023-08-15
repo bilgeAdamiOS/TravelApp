@@ -33,25 +33,19 @@ class APIHelper<T>:Fetchable {
 }
 
 
+//MARK: -- Generic Class
 class Movie<T> {
     
     init(name:T){
         
         print(name)
     }
-
     
     func test(name:T){
         
     }
     
 }
-
-
-
-
-
-
 
 protocol Prot {
     associatedtype T
@@ -72,15 +66,12 @@ class Helper<T>:Prot {
 }
 
 class TESTVC: UIViewController {
-    
-    let apiUrl = "https://64d8d7f85f9bf5b879ce9cec.mockapi.io/api/v1/Film"
-    
    
     override func viewWillAppear(_ animated: Bool) {
         
         let helper = APIHelper<String>()
         let movie = Movie(name: "Deneme")
-        movie.test(name: "asdasdsad")
+       
 
     }
     
@@ -91,53 +82,18 @@ class TESTVC: UIViewController {
         let helper = APIHelper<Int>()
         print(helper)
         helper.prop = 5
+        
         let result = helper.prop! * helper.prop!
         print(result)
         
-        let params = ["filmName":"Deneme","rating":"5.0"]
-        fetchData(from: apiUrl,parameters: params, completion: { (result:Result<Film,Error>) in
-            
-            switch result {
-            case .success(let value):
-                print(value)
-                
-            case.failure(let err):
-                print(err)
-            }
-        })
-        
-        
-        
-//        fetchData(from: apiUrl) { (result: Result<[User], Error>) in
-//            switch result {
-//            case .success(let users):
-//                for user in users {
-//                    print("User Name: \(user.ad), Email: \(user.eposta), ID: \(user.id)")
-//                }
-//
-//            case .failure(let error):
-//                print("Error: \(error)")
-//            }
-//        }
-        
     }
+    
+    
     
    
     func fetchData<T: Codable>(from apiUrl: String,parameters:Parameters, completion: @escaping (Result<T, Error>) -> Void) {
         AF.request(apiUrl,method: .post, parameters: parameters).responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                do {
-                    let jsonData = try JSONSerialization.data(withJSONObject: value)
-                    let decodedData = try JSONDecoder().decode(T.self, from: jsonData)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(error))
-                }
-                
-            case .failure(let error):
-                completion(.failure(error))
-            }
+            
         }
     }
 

@@ -52,6 +52,7 @@
 		D95E330E2A73B04600E00830 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95E330A2A73B04600E00830 /* Poppins-Regular.ttf */; };
 		D95E330F2A73B04600E00830 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95E330B2A73B04600E00830 /* Poppins-Bold.ttf */; };
 		D95E33102A73B04600E00830 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */; };
+		D9D2E7A32A8B75ED000B30AB /* NetworkingHelper(Singleton).swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		D95E330A2A73B04600E00830 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D95E330B2A73B04600E00830 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkingHelper(Singleton).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				D910976E2A86198100BA63AB /* MVVM */,
 				D91097692A84C9D800BA63AB /* Utils */,
 				D91097622A837D2300BA63AB /* Closure */,
+				D9D2E7A12A8B6F6C000B30AB /* Networking */,
 				D910975D2A83767100BA63AB /* DelegatePattern */,
 				D95E33072A7394F600E00830 /* CustomComponents */,
 				D95E33062A7394D300E00830 /* Controllers */,
@@ -259,6 +262,14 @@
 				D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9D2E7A12A8B6F6C000B30AB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +381,7 @@
 				D910977D2A88F01B00BA63AB /* TESTVC.swift in Sources */,
 				D91097422A791F0500BA63AB /* AlertVC.swift in Sources */,
 				D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */,
+				D9D2E7A32A8B75ED000B30AB /* NetworkingHelper(Singleton).swift in Sources */,
 				D91097402A791ECA00BA63AB /* MainTabbarController.swift in Sources */,
 				D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */,
 				D91097612A8376C500BA63AB /* TargetDelegateVC.swift in Sources */,

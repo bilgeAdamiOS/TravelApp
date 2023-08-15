@@ -64,19 +64,34 @@ class UserDefaultsSampleVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        saveToUD(value: "asdasdşlfjaşksdfj")
         
         setupViews()
+        
+        readFromUD(type: "")
+    }
+    
+    func saveToUD<T>(value:T) {
+        
+        userDefault.set(value, forKey: "deneme")
+    }
+    
+    func readFromUD<T>(type:T) {
+        
+        guard let obj = userDefault.value(forKey: "deneme") as? T else { return }
+        
+        print(obj)
         
     }
     
     @objc func btnSaveTapped(){
         
+        saveToUD(value: accessToken)
         //MARK: -- User Default'a veri yaz
-        userDefault.set(accessToken, forKey: "access-token")
-        userDefault.synchronize()
-        
-        userDefault.set(true, forKey: "isDone")
+//        userDefault.set(accessToken, forKey: "access-token")
+//        userDefault.synchronize()
+//
+//        userDefault.set(true, forKey: "isDone")
     }
     
     @objc func btnReadTapped(){
