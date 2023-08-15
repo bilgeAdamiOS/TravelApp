@@ -37,6 +37,8 @@
 		D91097762A861AB400BA63AB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097752A861AB400BA63AB /* Photo.swift */; };
 		D91097792A861CBE00BA63AB /* MvvmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097782A861CBE00BA63AB /* MvvmVC.swift */; };
 		D910977B2A861CDE00BA63AB /* MvvmVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910977A2A861CDE00BA63AB /* MvvmVM.swift */; };
+		D910977D2A88F01B00BA63AB /* TESTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910977C2A88F01B00BA63AB /* TESTVC.swift */; };
+		D91097802A88F07F00BA63AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D910977F2A88F07F00BA63AB /* Alamofire */; };
 		D9277A6A2A7145210040CFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A692A7145210040CFB0 /* AppDelegate.swift */; };
 		D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */; };
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
@@ -83,6 +85,7 @@
 		D91097752A861AB400BA63AB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		D91097782A861CBE00BA63AB /* MvvmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmVC.swift; sourceTree = "<group>"; };
 		D910977A2A861CDE00BA63AB /* MvvmVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmVM.swift; sourceTree = "<group>"; };
+		D910977C2A88F01B00BA63AB /* TESTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTVC.swift; sourceTree = "<group>"; };
 		D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilge_Adam_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9277A692A7145210040CFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9277A6B2A7145210040CFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91097802A88F07F00BA63AB /* Alamofire in Frameworks */,
 				D95E32F92A72616A00E00830 /* SnapKit in Frameworks */,
 				D95E33012A72682100E00830 /* TinyConstraints in Frameworks */,
 			);
@@ -230,6 +234,7 @@
 				D91097492A7B82B600BA63AB /* ContactVC.swift */,
 				D91097672A84B9E700BA63AB /* UserDefaultsSampleVC.swift */,
 				D910976C2A84CBFE00BA63AB /* KeychainSampleVC.swift */,
+				D910977C2A88F01B00BA63AB /* TESTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			packageProductDependencies = (
 				D95E32F82A72616A00E00830 /* SnapKit */,
 				D95E33002A72682100E00830 /* TinyConstraints */,
+				D910977F2A88F07F00BA63AB /* Alamofire */,
 			);
 			productName = Bilge_Adam_Sample;
 			productReference = D9277A662A7145210040CFB0 /* Bilge_Adam_Sample.app */;
@@ -307,6 +313,7 @@
 			packageReferences = (
 				D95E32F72A72616A00E00830 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D95E32FF2A72682100E00830 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				D910977E2A88F07E00BA63AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D9277A672A7145210040CFB0 /* Products */;
 			projectDirPath = "";
@@ -360,6 +367,7 @@
 				D91097762A861AB400BA63AB /* Photo.swift in Sources */,
 				D9277A6C2A7145210040CFB0 /* SceneDelegate.swift in Sources */,
 				D910974D2A7CDD4700BA63AB /* Member.swift in Sources */,
+				D910977D2A88F01B00BA63AB /* TESTVC.swift in Sources */,
 				D91097422A791F0500BA63AB /* AlertVC.swift in Sources */,
 				D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */,
 				D91097402A791ECA00BA63AB /* MainTabbarController.swift in Sources */,
@@ -582,6 +590,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D910977E2A88F07E00BA63AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
 		D95E32F72A72616A00E00830 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -601,6 +617,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D910977F2A88F07F00BA63AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D910977E2A88F07E00BA63AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		D95E32F82A72616A00E00830 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D95E32F72A72616A00E00830 /* XCRemoteSwiftPackageReference "SnapKit" */;
