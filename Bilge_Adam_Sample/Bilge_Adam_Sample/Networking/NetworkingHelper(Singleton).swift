@@ -38,7 +38,7 @@ class NetworkingHelper {
     }
     
     
-    func arrayRequest<T:Codable>(from apiUrl:String, params:Parameters, method:HTTPMethod, callback: @escaping (Result<T,Error>) -> Void) {
+    func arrayRequest<T:Codable>(from apiUrl:String, params:Parameters, method:HTTPMethod, callback: @escaping (Result<[T],Error>) -> Void) {
         
         AF.request(apiUrl,
                    method:method,
@@ -48,7 +48,7 @@ class NetworkingHelper {
             case .success(let value):
                 do {
                     let jsonData = try JSONSerialization.data(withJSONObject: value)
-                    let decodedData = try JSONDecoder().decode(T.self, from: jsonData)
+                    let decodedData = try JSONDecoder().decode([T].self, from: jsonData)
                     callback(.success(decodedData))
                 } catch {
                     callback(.failure(error))
