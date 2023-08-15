@@ -9,6 +9,8 @@ import UIKit
 import Alamofire
 
 
+
+//MARK: -- Generic protocol. assosiatedType protocollere generic tipler tanımlamak için kullanılır.
 protocol Fetchable {
     
     associatedtype T
@@ -21,6 +23,7 @@ protocol Fetchable {
 }
 
 
+//MARK: -- Generic Class with generic protocol
 class APIHelper<T>:Fetchable {
     
     var prop: T?
@@ -65,7 +68,7 @@ class Helper<T>:Prot {
     }
 }
 
-class TESTVC: UIViewController {
+class GenericsVC: UIViewController {
    
     override func viewWillAppear(_ animated: Bool) {
         
