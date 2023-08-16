@@ -38,7 +38,6 @@ class MvvmVM {
     
     //MARK: -- callback closure, fonksiyonun bitiminden sonra çalışır ve parametre olarak [Photo] alır.
     func getDataFromRemote(with callback:@escaping (([Photo])->Void)){
-        
         apiService.fetchPopularPhoto { [weak self] (success,photos,err) in
             guard let this = self else { return }
             if let err = err {
@@ -46,11 +45,10 @@ class MvvmVM {
             }else {
                 this.photoArray = photos
                 callback(photos)
-                print("Allah-ü ekber vuhuuuuu: \(photos)")
+               
             }
         }
-        
-        print("işlem biter yine sana hüsran: \(photoArray)")
-        
     }
 }
+
+

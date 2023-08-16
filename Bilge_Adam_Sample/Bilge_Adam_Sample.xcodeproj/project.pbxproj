@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097352A73BD2800BA63AB /* UIView+Extensions.swift */; };
 		D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097372A77ADE900BA63AB /* CurrencyTextField.swift */; };
 		D910973A2A77AF3C00BA63AB /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91097392A77AF3C00BA63AB /* CurrencyVC.swift */; };
 		D910973C2A77DFE400BA63AB /* SliderSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910973B2A77DFE400BA63AB /* SliderSampleVC.swift */; };
@@ -57,7 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D91097352A73BD2800BA63AB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D91097372A77ADE900BA63AB /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		D91097392A77AF3C00BA63AB /* CurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
 		D910973B2A77DFE400BA63AB /* SliderSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSampleVC.swift; sourceTree = "<group>"; };
@@ -161,6 +159,7 @@
 		D91097692A84C9D800BA63AB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D910975B2A827DB600BA63AB /* Extensions.swift */,
 				D910976A2A84C9F000BA63AB /* KeychainHelper.swift */,
 			);
 			path = Utils;
@@ -249,8 +248,6 @@
 			children = (
 				D95E33042A7394C800E00830 /* CustomTextField.swift */,
 				D91097372A77ADE900BA63AB /* CurrencyTextField.swift */,
-				D91097352A73BD2800BA63AB /* UIView+Extensions.swift */,
-				D910975B2A827DB600BA63AB /* Extensions.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -364,7 +361,6 @@
 				D910975C2A827DB600BA63AB /* Extensions.swift in Sources */,
 				D9D2E7A52A8CBAD8000B30AB /* NetworkingSampleVC.swift in Sources */,
 				D910976B2A84C9F000BA63AB /* KeychainHelper.swift in Sources */,
-				D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */,
 				D910976D2A84CBFE00BA63AB /* KeychainSampleVC.swift in Sources */,
 				D910973E2A78EE6B00BA63AB /* Segmented-SwitchVC.swift in Sources */,
 				D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */,

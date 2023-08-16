@@ -40,9 +40,9 @@ class MvvmVC: UIViewController {
             this.array = this.viewModel.photoArray
             
         }
+        viewModel.getDataFromRemote(with: { obj in
         
-        viewModel.getDataFromRemote()
-
+        })
     }
     
    

@@ -89,6 +89,25 @@ extension UIView {
     }
 }
 
+extension UIColor {
+
+     class func applyGradient(colors: [UIColor], bounds:CGRect) -> UIColor {
+        
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors.map { $0.cgColor }
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return UIColor(patternImage: image!)
+
+    }
+}
+
 extension UITextField {
     var placeholder: String? {
           get {

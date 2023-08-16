@@ -483,86 +483,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6CE3738C-6F03-49E4-A279-DDD67CC12D4B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/MVVM/MvvmVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "setupVM()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BE51104C-89CA-496D-B2DE-0A2D3A428198"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/MVVM/MvvmVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "getDataFromRemote()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BE51104C-89CA-496D-B2DE-0A2D3A428198 - 62ca9f307d206132"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bilge_Adam_Sample.MvvmVM.getDataFromRemote() -&gt; ()"
-                  moduleName = "Bilge_Adam_Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/MVVM/MvvmVM.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "BE51104C-89CA-496D-B2DE-0A2D3A428198 - b0c1e1d035668939"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Array&lt;Bilge_Adam_Sample.Photo&gt;, Swift.Optional&lt;Bilge_Adam_Sample.APIError&gt;) -&gt; () in Bilge_Adam_Sample.MvvmVM.getDataFromRemote() -&gt; ()"
-                  moduleName = "Bilge_Adam_Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/MVVM/MvvmVM.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "02005C2E-6095-41AC-B020-69040D3FE120"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/MVVM/MvvmVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "getDataFromRemote()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BB3459BD-4B74-47C9-8095-BED265B44818"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -622,22 +542,6 @@
                   offsetFromSymbolStart = "744">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C9F61516-8FB2-49F1-9B5F-70617F3D89BA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/Controllers/AlertVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

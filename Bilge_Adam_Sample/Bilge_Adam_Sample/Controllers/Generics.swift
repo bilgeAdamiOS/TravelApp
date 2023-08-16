@@ -70,6 +70,7 @@ class Helper<T>:Prot {
 
 class GenericsVC: UIViewController {
    
+    
     override func viewWillAppear(_ animated: Bool) {
         
         let helper = APIHelper<String>()
