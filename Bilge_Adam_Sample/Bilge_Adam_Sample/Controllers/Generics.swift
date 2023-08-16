@@ -106,15 +106,21 @@ class GenericsVC: UIViewController {
 
 
 struct User:Codable {
-    var ad: String
-    var eposta: [Email]
+    var name: String
+    var surname: String
+    var email:String
+    var phone:String
+    var note:String
     var id: String
     
-    enum CodingKeys: String, CodingKey {
-        case ad = "name"
-        case eposta = "email"
-        case id = "id"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case userName = "name"
+//        case userSurname = "surname"
+//        case userEmail = "email"
+//        case userPhone = "phone"
+//        case userNote = "note"
+//        case userId = "id"
+//    }
 }
 
 

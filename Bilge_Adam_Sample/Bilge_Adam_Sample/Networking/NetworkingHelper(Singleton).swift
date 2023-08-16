@@ -9,12 +9,30 @@ import Foundation
 import Alamofire
 
 
+enum Endpoint {
+    
+    static let baseURL = "https://64d8d7f85f9bf5b879ce9cec.mockapi.io/api/v1"
+    
+    case user(id:String = "")
+    case film
+    
+    var apiURL:String {
+        switch self {
+        case .user(let id):
+            return Endpoint.baseURL + "/User" + "/\(id)"
+        case .film:
+            return Endpoint.baseURL + "/Film"
+        }
+    }
+}
+
 class NetworkingHelper {
     
     
     static let shared = NetworkingHelper()
     
-    func objectRequest<T:Codable>(from apiUrl:String, params:Parameters, method:HTTPMethod, callback: @escaping (Result<T,Error>) -> Void) {
+    func objectRequest<T:Codable>(from apiUrl:String, params:Parameters = [:], method:HTTPMethod, callback: @escaping (Result<T,Error>) -> Void) {
+        
         
         AF.request(apiUrl,
                    method:method,

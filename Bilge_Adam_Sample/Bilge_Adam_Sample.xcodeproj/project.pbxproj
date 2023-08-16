@@ -53,6 +53,7 @@
 		D95E330F2A73B04600E00830 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95E330B2A73B04600E00830 /* Poppins-Bold.ttf */; };
 		D95E33102A73B04600E00830 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */; };
 		D9D2E7A32A8B75ED000B30AB /* NetworkingHelper(Singleton).swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */; };
+		D9D2E7A52A8CBAD8000B30AB /* NetworkingSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A42A8CBAD8000B30AB /* NetworkingSampleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		D95E330B2A73B04600E00830 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkingHelper(Singleton).swift"; sourceTree = "<group>"; };
+		D9D2E7A42A8CBAD8000B30AB /* NetworkingSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSampleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */,
+				D9D2E7A42A8CBAD8000B30AB /* NetworkingSampleVC.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				D910975F2A8376B000BA63AB /* MainDelegateVC.swift in Sources */,
 				D910975C2A827DB600BA63AB /* Extensions.swift in Sources */,
+				D9D2E7A52A8CBAD8000B30AB /* NetworkingSampleVC.swift in Sources */,
 				D910976B2A84C9F000BA63AB /* KeychainHelper.swift in Sources */,
 				D91097362A73BD2800BA63AB /* UIView+Extensions.swift in Sources */,
 				D910976D2A84CBFE00BA63AB /* KeychainSampleVC.swift in Sources */,

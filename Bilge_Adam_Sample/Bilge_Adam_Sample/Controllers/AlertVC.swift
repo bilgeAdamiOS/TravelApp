@@ -38,29 +38,22 @@ class AlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let apiUrl = "https://64d8d7f85f9bf5b879ce9cec.mockapi.io/api/v1/Film"
         
-        let param = ["filmName":"Oppenheimer", "rating":"8.4"]
         
-        NetworkingHelper.shared.objectRequest(from: apiUrl, params: param, method: .post, callback: { (result:Result<Film, Error>) in
-            
-            switch result {
-            case .success(let movie):
-                
-                print(movie.filmName)
-            case .failure(let err):
-                
-                print(err.localizedDescription)
-            }
-            
-        })
+        let url = Endpoint.user(id:"1").apiURL
         
-        let query = ["":""]
-        NetworkingHelper.shared.arrayRequest(from: apiUrl, params: query, method: .get, callback: { (result:Result<[Film],Error>) in
+//        let query = [
+//            "name": "Mahmut",
+//            "surname": "Doğan ",
+//            "email": "mahmut@tuple.com",
+//            "note": "Burası değişti."]
+//
+        
+        NetworkingHelper.shared.objectRequest(from: url, method: .delete, callback: {(result:Result<User,Error>) in
             
             print(result)
+            
         })
-        
         
         
         
