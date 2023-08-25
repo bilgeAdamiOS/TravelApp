@@ -22,7 +22,7 @@ class MainTabbarController: UITabBarController {
         appearance.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
         
         
-        let vc1 = AlertVC()
+        let vc1 = CollectionViewSampleVC()
         let nav1 = UINavigationController(rootViewController: vc1)
         let img = UIImage(systemName: "house")
         let selectedImg = UIImage(systemName: "house.fill")

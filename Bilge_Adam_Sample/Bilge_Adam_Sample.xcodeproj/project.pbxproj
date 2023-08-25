@@ -43,6 +43,8 @@
 		D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9277A6D2A7145210040CFB0 /* ForgotPasswordVC.swift */; };
 		D9277A732A7145220040CFB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9277A722A7145220040CFB0 /* Assets.xcassets */; };
 		D9277A762A7145220040CFB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9277A742A7145220040CFB0 /* LaunchScreen.storyboard */; };
+		D929901E2A934D1100E8743D /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D929901D2A934D1100E8743D /* ExamViewController.swift */; };
+		D92D38332A9261BC00AA766D /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D38322A9261BC00AA766D /* CameraVC.swift */; };
 		D95E32F92A72616A00E00830 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D95E32F82A72616A00E00830 /* SnapKit */; };
 		D95E33012A72682100E00830 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = D95E33002A72682100E00830 /* TinyConstraints */; };
 		D95E33032A7393EC00E00830 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E33022A7393EC00E00830 /* LoginVC.swift */; };
@@ -53,6 +55,9 @@
 		D95E33102A73B04600E00830 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */; };
 		D9D2E7A32A8B75ED000B30AB /* NetworkingHelper(Singleton).swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */; };
 		D9D2E7A52A8CBAD8000B30AB /* NetworkingSampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A42A8CBAD8000B30AB /* NetworkingSampleVC.swift */; };
+		D9D2E7A72A8D0AB8000B30AB /* SenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A62A8D0AB8000B30AB /* SenderVC.swift */; };
+		D9D2E7A92A8D0AD9000B30AB /* TargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7A82A8D0AD9000B30AB /* TargetVC.swift */; };
+		D9D2E7AB2A8DEF51000B30AB /* LocationServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E7AA2A8DEF51000B30AB /* LocationServicesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +98,8 @@
 		D9277A722A7145220040CFB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9277A752A7145220040CFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9277A772A7145220040CFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D929901D2A934D1100E8743D /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		D92D38322A9261BC00AA766D /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		D95E33022A7393EC00E00830 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D95E33042A7394C800E00830 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D95E33092A73B04600E00830 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -101,6 +108,9 @@
 		D95E330C2A73B04600E00830 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D9D2E7A22A8B75ED000B30AB /* NetworkingHelper(Singleton).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkingHelper(Singleton).swift"; sourceTree = "<group>"; };
 		D9D2E7A42A8CBAD8000B30AB /* NetworkingSampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSampleVC.swift; sourceTree = "<group>"; };
+		D9D2E7A62A8D0AB8000B30AB /* SenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderVC.swift; sourceTree = "<group>"; };
+		D9D2E7A82A8D0AD9000B30AB /* TargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetVC.swift; sourceTree = "<group>"; };
+		D9D2E7AA2A8DEF51000B30AB /* LocationServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServicesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 				D91097452A791F0C00BA63AB /* TableViewSample.swift */,
 				D91097502A7CDD9E00BA63AB /* CustomCell.swift */,
 				D91097542A7CEF0400BA63AB /* AddressInfo.swift */,
+				D929901D2A934D1100E8743D /* ExamViewController.swift */,
 			);
 			path = TableViewSampleVC;
 			sourceTree = "<group>";
@@ -239,6 +250,10 @@
 				D91097672A84B9E700BA63AB /* UserDefaultsSampleVC.swift */,
 				D910976C2A84CBFE00BA63AB /* KeychainSampleVC.swift */,
 				D910977C2A88F01B00BA63AB /* Generics.swift */,
+				D9D2E7A62A8D0AB8000B30AB /* SenderVC.swift */,
+				D9D2E7A82A8D0AD9000B30AB /* TargetVC.swift */,
+				D9D2E7AA2A8DEF51000B30AB /* LocationServicesVC.swift */,
+				D92D38322A9261BC00AA766D /* CameraVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D910975F2A8376B000BA63AB /* MainDelegateVC.swift in Sources */,
+				D929901E2A934D1100E8743D /* ExamViewController.swift in Sources */,
 				D910975C2A827DB600BA63AB /* Extensions.swift in Sources */,
 				D9D2E7A52A8CBAD8000B30AB /* NetworkingSampleVC.swift in Sources */,
 				D910976B2A84C9F000BA63AB /* KeychainHelper.swift in Sources */,
@@ -366,9 +382,12 @@
 				D9277A6E2A7145210040CFB0 /* ForgotPasswordVC.swift in Sources */,
 				D910974A2A7B82B600BA63AB /* ContactVC.swift in Sources */,
 				D91097512A7CDD9E00BA63AB /* CustomCell.swift in Sources */,
+				D9D2E7A72A8D0AB8000B30AB /* SenderVC.swift in Sources */,
 				D91097682A84B9E700BA63AB /* UserDefaultsSampleVC.swift in Sources */,
+				D9D2E7A92A8D0AD9000B30AB /* TargetVC.swift in Sources */,
 				D91097662A837DA200BA63AB /* TargetClosureVC.swift in Sources */,
 				D91097552A7CEF0400BA63AB /* AddressInfo.swift in Sources */,
+				D9D2E7AB2A8DEF51000B30AB /* LocationServicesVC.swift in Sources */,
 				D910977B2A861CDE00BA63AB /* MvvmVM.swift in Sources */,
 				D91097382A77ADE900BA63AB /* CurrencyTextField.swift in Sources */,
 				D91097792A861CBE00BA63AB /* MvvmVC.swift in Sources */,
@@ -381,6 +400,7 @@
 				D910977D2A88F01B00BA63AB /* Generics.swift in Sources */,
 				D91097422A791F0500BA63AB /* AlertVC.swift in Sources */,
 				D91097482A791F0E00BA63AB /* PickerVC.swift in Sources */,
+				D92D38332A9261BC00AA766D /* CameraVC.swift in Sources */,
 				D9D2E7A32A8B75ED000B30AB /* NetworkingHelper(Singleton).swift in Sources */,
 				D91097402A791ECA00BA63AB /* MainTabbarController.swift in Sources */,
 				D91097582A80E59B00BA63AB /* CollectionViewSampleVC.swift in Sources */,
@@ -534,6 +554,10 @@
 				DEVELOPMENT_TEAM = J653U6Q9Y9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bilge_Adam_Sample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Kameraya izin ver";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "İzin verir misin bişey denicem";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Bu uygulama konumunuzu kullanmak istiyor.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Galeriye izin ver";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -561,6 +585,10 @@
 				DEVELOPMENT_TEAM = J653U6Q9Y9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bilge_Adam_Sample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Kameraya izin ver";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "İzin verir misin bişey denicem";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Bu uygulama konumunuzu kullanmak istiyor.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Galeriye izin ver";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

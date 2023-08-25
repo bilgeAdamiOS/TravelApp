@@ -12,6 +12,8 @@ class MvvmVM {
     let apiService: APIServiceProtocol
     
     var photoArray = [Photo]()
+    
+   
 
     init(apiService:APIServiceProtocol = APIService()){
         self.apiService = apiService
@@ -36,8 +38,14 @@ class MvvmVM {
         
     }
     
-    //MARK: -- callback closure, fonksiyonun bitiminden sonra çalışır ve parametre olarak [Photo] alır.
+    
+    /// Sunucudan fotoğrafları çekmek için kullanılır.
+    /// - Parameters:
+    ///   - callback: fonksiyonun bitiminden sonra çalışır ve parametre olarak [Photo] iletir.
+    /// - Returns: Herhangi return değeri yoktur.
     func getDataFromRemote(with callback:@escaping (([Photo])->Void)){
+        
+        print("C")
         apiService.fetchPopularPhoto { [weak self] (success,photos,err) in
             guard let this = self else { return }
             if let err = err {
@@ -45,9 +53,11 @@ class MvvmVM {
             }else {
                 this.photoArray = photos
                 callback(photos)
+                print("A")
                
             }
         }
+        print("E")
     }
 }
 

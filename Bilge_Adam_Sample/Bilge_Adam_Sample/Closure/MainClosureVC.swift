@@ -7,21 +7,31 @@
 
 import UIKit
 
+
+
 class MainClosureVC: UIViewController {
 
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
         self.view.backgroundColor = .blue
-        
+
         let vc = TargetClosureVC()
+        
         vc.targetClosure = { text in
             print(text)
+           
         }
         
         self.navigationController?.pushViewController(vc, animated: true)
         
+        
+        
     }
+    
+    
     
 }

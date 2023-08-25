@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import TinyConstraints
 
 enum CurrentType:String {
     case ac = "AC"
@@ -72,10 +73,11 @@ class CollectionViewSampleVC: UIViewController {
         layout.minimumLineSpacing = 16
         layout.minimumInteritemSpacing = 16
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16)
+        //layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.contentInsetAdjustmentBehavior = .never
         cv.isPagingEnabled = false
-        cv.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        cv.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
         cv.delegate = self
         cv.dataSource = self
         cv.showsVerticalScrollIndicator = false
@@ -108,28 +110,23 @@ class CollectionViewSampleVC: UIViewController {
     }
     
     private func setupViews(){
-        
         self.view.backgroundColor = .white
         self.view.addSubviews(tableView,collectionView)
-        
+        self.navigationController?.isNavigationBarHidden = true
         setupLayout()
     }
     
     private func setupLayout() {
         
-        tableView.snp.makeConstraints({ tv in
-            tv.top.equalTo(self.view.safeAreaLayoutGuide)
-            tv.leading.equalToSuperview().offset(8)
-            tv.trailing.equalToSuperview().offset(-8)
-            tv.bottom.equalTo(collectionView.snp.top).offset(-16)
-        })
+//        tableView.snp.makeConstraints({ tv in
+//            tv.top.equalTo(self.view.safeAreaLayoutGuide)
+//            tv.leading.equalToSuperview().offset(8)
+//            tv.trailing.equalToSuperview().offset(-8)
+//            tv.bottom.equalTo(collectionView.snp.top).offset(-16)
+//        })
         
-        collectionView.snp.makeConstraints({ cv in
-            cv.leading.equalToSuperview()
-            cv.trailing.equalToSuperview()
-            cv.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-24)
-            cv.height.equalTo(200)
-        })
+        collectionView.edgesToSuperview(excluding: .bottom)
+        collectionView.height(250)
     }
    
 
@@ -142,7 +139,7 @@ extension CollectionViewSampleVC:UICollectionViewDelegateFlowLayout {
     //MARK: -- Her bir item için ebatları belirttiğimiz layout methodu.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let size = CGSize(width: collectionView.frame.width-32, height:150)
+        let size = CGSize(width: collectionView.frame.width-32, height:250)
         return size
     }
     
@@ -176,7 +173,7 @@ extension CollectionViewSampleVC:UICollectionViewDataSource {
 extension CollectionViewSampleVC:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 61
+        return 250
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

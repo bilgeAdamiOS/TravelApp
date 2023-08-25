@@ -18,6 +18,34 @@ enum FormatType:String {
     case time = "HH:mm"
 }
 
+extension UIButton {
+    func centerTextAndImage(imageAboveText: Bool = false, spacing: CGFloat) {
+            if imageAboveText {
+                // https://stackoverflow.com/questions/2451223/#7199529
+                guard
+                    let imageSize = imageView?.image?.size,
+                    let text = titleLabel?.text,
+                    let font = titleLabel?.font else { return }
+
+                let titleSize = text.size(withAttributes: [.font: font])
+
+                let titleOffset = -(imageSize.height + spacing)
+                titleEdgeInsets = UIEdgeInsets(top: 0.0, left: -imageSize.width, bottom: titleOffset, right: 0.0)
+
+                let imageOffset = -(titleSize.height + spacing)
+                imageEdgeInsets = UIEdgeInsets(top: imageOffset, left: 0.0, bottom: 0.0, right: -titleSize.width)
+
+                let edgeOffset = abs(titleSize.height - imageSize.height) / 2.0
+                contentEdgeInsets = UIEdgeInsets(top: edgeOffset, left: 0.0, bottom: edgeOffset, right: 0.0)
+            } else {
+                let insetAmount = spacing / 2
+                imageEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: insetAmount)
+                titleEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: -insetAmount)
+                contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
+            }
+        }
+}
+
 extension UIStackView {
     func addArrangedSubviews(_ view: UIView...) {
         view.forEach({ v in
@@ -34,13 +62,26 @@ extension UIView {
         view.forEach({ v in
             self.addSubview(v)
         })
+        
+        
     }
+    
+    
     
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
+       
+        mask.shadowColor = UIColor.black.cgColor
+        mask.shadowPath = mask.path
+        mask.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        mask.shadowOpacity = 0.4
+        mask.shadowRadius = 10
+        mask.fillColor = UIColor.systemBlue.cgColor
         mask.path = path.cgPath
         layer.mask = mask
+        layer.insertSublayer(mask, at: 0)
+
     }
     
     func animateBorderColor(toColor: UIColor, duration: Double) {
@@ -71,7 +112,7 @@ extension UIView {
     }
     
     
-    
+   
     func rotate(angle: CGFloat) {
         let radians = angle / 180.0 * CGFloat.pi
         let rotation = self.transform.rotated(by: radians)
@@ -82,6 +123,7 @@ extension UIView {
         return self.superview?.convert(self.frame.origin, to: nil)
     }
 
+ 
     var globalFrame: CGRect? {
         let rootView = UIApplication.shared.windows.compactMap({ $0.rootViewController }).first?.view
         //let rootView = UIApplication.shared.keyWindow?.rootViewController?.view
@@ -90,6 +132,8 @@ extension UIView {
 }
 
 extension UIColor {
+    
+    
 
      class func applyGradient(colors: [UIColor], bounds:CGRect) -> UIColor {
         

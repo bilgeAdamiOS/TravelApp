@@ -7,12 +7,55 @@
 
 import UIKit
 
+
+
+struct RegisterObject:Codable {
+    var message:String?
+    var status:String?
+    
+    init() {
+        
+    }
+}
+
 class NetworkingSampleVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let param = [
+                     "email": "melih3@gmail.com",
+                     "password": "123456"]
         
+        //register(params: param)
+        login(params: param)
+    }
+    
+    func login(params:[String:Any]) {
+        let endpoint = Endpoint.auth
+        NetworkingHelper.shared.auth(fromApi: endpoint.apiURL, params: params, callback: { (result:Result<Any,Error>) in
+            
+            print(result)
+        })
+    }
+    
+    func register(params:[String:Any]){
+        
+        let endpoint = Endpoint.auth
+        
+        NetworkingHelper.shared.auth(fromApi: endpoint.apiURL, params: params, callback: { (result:Result<Any,Error>) in
+            
+            switch result {
+            case .success(let json):
+                
+                if let json = json as? [String: Any], let message = json["Message"] as? String{
+                  print(message)
+                }
+                
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        })
     }
     
     

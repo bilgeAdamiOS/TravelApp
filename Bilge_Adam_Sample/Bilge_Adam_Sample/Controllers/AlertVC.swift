@@ -8,11 +8,13 @@
 import UIKit
 import SnapKit
 
+
 class AlertVC: UIViewController {
     
     weak var agent:EditDelegate?
     
     let userDefault = UserDefaults.standard
+    
     
     private lazy var button:UIButton = {
         let b = UIButton()
@@ -59,9 +61,12 @@ class AlertVC: UIViewController {
         
         print(userDefault.string(forKey: "access-token"))
         
+        
         setupViews()
         
     }
+    
+    
     
     func addAlert(){
         

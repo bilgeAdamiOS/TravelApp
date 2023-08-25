@@ -65,7 +65,7 @@ class CollectionAddressCell: UICollectionViewCell {
     private lazy var imgDefault:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.image = #imageLiteral(resourceName: "location2")
+        iv.image = #imageLiteral(resourceName: "leaves")
         return iv
     }()
     
@@ -107,9 +107,9 @@ class CollectionAddressCell: UICollectionViewCell {
     }
     
     private func setupViews(){
-        self.contentView.backgroundColor = .white
-        self.contentView.addSubviews(lblName,lblAddress,lblCableType)
         
+        self.contentView.addSubviews(lblName,lblAddress,lblCableType,imgDefault)
+        self.contentView.backgroundColor = .red
         setupLayout()
     }
     
@@ -124,7 +124,7 @@ class CollectionAddressCell: UICollectionViewCell {
         lblCableType.bottomToSuperview(offset:-8)
         lblCableType.centerXToSuperview()
         
-        
+        imgDefault.edgesToSuperview()
     }
     
     required init?(coder: NSCoder) {

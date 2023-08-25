@@ -71,7 +71,8 @@ class LoginVC: UIViewController {
     private lazy var btnNext:UIButton = {
         let button = UIButton()
         button.setTitle("Giriş Yap", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
+        button.setImage(#imageLiteral(resourceName: "location2"), for: .normal)
+        //button.backgroundColor = #colorLiteral(red: 0.09411764706, green: 0.2901960784, blue: 0.1725490196, alpha: 1)
         button.addTarget(self, action: #selector(btnNextTapped), for: .touchUpInside)
         return button
     }()
@@ -113,22 +114,25 @@ class LoginVC: UIViewController {
         
         
         setupViews()
-        
-        
+        btnNext.centerTextAndImage(imageAboveText: true, spacing: 8)
         
     }
+
     
     override func viewDidLayoutSubviews() {
-        let radius = btnNext.frame.height / 2
-        btnNext.layer.cornerRadius = radius
+//        super.viewDidLayoutSubviews()
+//        btnNext.layer.shadowColor = UIColor.black.cgColor
+//        btnNext.layer.shadowRadius = 10
+//        btnNext.layer.shadowOffset = CGSize(width: 0, height: 1)
+//        btnNext.layer.shadowOpacity = 1
+        
+        btnNext.roundCorners(corners: [.topLeft,.topRight,.bottomLeft], radius: 16)
+        
     }
     
     @objc func btnNextTapped() {
-        if username == txtUserName.text && password == txtPassword.text {
-            print("başarılı giriş")
-        }else {
-            print("kullanıcı veya şifre hatalı")
-        }
+       let vc = CollectionViewSampleVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func btnSignUpTapped(){
@@ -217,7 +221,7 @@ class LoginVC: UIViewController {
             make.bottom.equalTo(stackView.snp.top).offset(-20)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.height.equalTo(50)
+            make.height.equalTo(100)
         })
         
         btnSignUp.width(120)

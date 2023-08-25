@@ -98,6 +98,38 @@
             endingLineNumber = "257"
             landmarkName = "deleteCellRow(at:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2ACEB86B-8476-4CB2-8B84-F4C57C40101A - 73234f744182843a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.TableViewSample.deleteCellRow(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/TableViewSampleVC/TableViewSample.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "2ACEB86B-8476-4CB2-8B84-F4C57C40101A - 73234f744182843a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.TableViewSample.deleteCellRow(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/TableViewSampleVC/TableViewSample.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,8 +158,8 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,13 +174,13 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - eff80cf674622e6f"
+                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - eff80cf674622f67"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -158,12 +190,12 @@
                   urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
                   offsetFromSymbolStart = "88">
                </Location>
                <Location
-                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - e4ed9e846563c12"
+                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - e4ed9e846563d1a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -173,8 +205,8 @@
                   urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
                   offsetFromSymbolStart = "92">
                </Location>
             </Locations>
@@ -190,8 +222,8 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +254,8 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
          </BreakpointContent>
@@ -355,22 +387,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8FE8E0A3-3EE1-46D4-86C6-EEABBF370116"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bilge_Adam_Sample/Closure/MainClosureVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "12F7475F-5B0A-4A93-B5BA-426956FD8F38"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -461,6 +477,66 @@
                   endingLineNumber = "84"
                   offsetFromSymbolStart = "392">
                </Location>
+               <Location
+                  uuid = "57A85C10-6AE8-4301-B9EE-7737FE4A7BF2 - 10cac2f1962c285b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.KeychainSampleVC.btnReadTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/KeychainSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "57A85C10-6AE8-4301-B9EE-7737FE4A7BF2 - 10cac2f1962c285b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.KeychainSampleVC.btnReadTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/KeychainSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "424">
+               </Location>
+               <Location
+                  uuid = "57A85C10-6AE8-4301-B9EE-7737FE4A7BF2 - 10cac2f1962c285b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.KeychainSampleVC.btnReadTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/KeychainSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "57A85C10-6AE8-4301-B9EE-7737FE4A7BF2 - 10cac2f1962c285b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.KeychainSampleVC.btnReadTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/KeychainSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "404">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -478,6 +554,38 @@
             endingLineNumber = "81"
             landmarkName = "btnReadTapped()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D4C81752-63CB-46E4-B230-A8ADEE9757D0 - 10cac2f1962c29e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.KeychainSampleVC.btnReadTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/KeychainSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "D4C81752-63CB-46E4-B230-A8ADEE9757D0 - 10cac2f1962c29e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.KeychainSampleVC.btnReadTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/KeychainSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -494,6 +602,38 @@
             endingLineNumber = "83"
             landmarkName = "readFromUD(type:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB3459BD-4B74-47C9-8095-BED265B44818 - e4c5ec5f804a0632"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "BB3459BD-4B74-47C9-8095-BED265B44818 - e4c5ec5f804a0632"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "584">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -541,7 +681,164 @@
                   endingLineNumber = "81"
                   offsetFromSymbolStart = "744">
                </Location>
+               <Location
+                  uuid = "A2E9B4B2-E3E7-43CC-AAD1-CAB15CB179C9 - e4c5ec5f804a0670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "A2E9B4B2-E3E7-43CC-AAD1-CAB15CB179C9 - e4c5ec5f804a0670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "812">
+               </Location>
+               <Location
+                  uuid = "A2E9B4B2-E3E7-43CC-AAD1-CAB15CB179C9 - e4c5ec5f804a0670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.UserDefaultsSampleVC.readFromUD&lt;&#x3c4;_0_0&gt;(type: &#x3c4;_0_0) -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/UserDefaultsSampleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "756">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD4AF22E-ED85-4341-B2B9-9A33219F21C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/Networking/NetworkingSampleVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "register(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DED050E9-7DFA-4982-8830-91E774B64AD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/Networking/NetworkingSampleVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "login(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C768C3E-2300-4F19-B11B-E56635413F4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/MVVM/MvvmVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getDataFromRemote(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22C04614-FF97-4A24-89AF-79FA81A442E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/MVVM/MvvmVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "getDataFromRemote(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA5B57D8-3BA1-4C00-B8E0-4D9E81B7419B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/MVVM/MvvmVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getDataFromRemote(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAE36968-30F4-4817-99EF-D784C657E53A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/MVVM/MvvmVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "setupVM()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1036E135-F306-43C2-8D8C-07A2BFABBEAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bilge_Adam_Sample/MVVM/MvvmVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "setupVM()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

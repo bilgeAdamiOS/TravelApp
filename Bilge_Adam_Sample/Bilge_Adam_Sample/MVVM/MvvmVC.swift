@@ -13,7 +13,7 @@ class MvvmVC: UIViewController {
     let viewModel = MvvmVM()
     
     var array = [Photo]()
-    
+
     private lazy var tableView:UITableView = {
         let tv = UITableView()
         tv.delegate = self
@@ -33,6 +33,7 @@ class MvvmVC: UIViewController {
     
     private func setupVM(){
         
+       
         viewModel.photoArrayClosure = { [weak self] in
             
             guard let this = self else { return }
@@ -40,16 +41,20 @@ class MvvmVC: UIViewController {
             this.array = this.viewModel.photoArray
             
         }
+        
+        print("B")
         viewModel.getDataFromRemote(with: { obj in
         
         })
     }
     
-   
+    
+    
     private func setupViews(){
         self.view.addSubview(tableView)
         setupLayout()
     }
+    
     
     private func setupLayout(){
         tableView.edgesToSuperview()
