@@ -7,6 +7,7 @@
 
 
 import UIKit
+import Kingfisher
 
 enum FormatType:String {
     case longFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -361,5 +362,37 @@ extension UIApplication {
             return topViewController(base: presented)
         }
         return base
+    }
+}
+
+extension UIImageView {
+    
+    func setImage(from urlString: String,
+                  placeholder: UIImage? = nil,
+                  processor: ImageProcessor? = nil,
+                  lowResolutionURL: URL? = nil,
+                  progressHandler: ((Int64, Int64) -> Void)? = nil,
+                  onSuccess: (() -> Void)? = nil,
+                  onFailure: ((Error) -> Void)? = nil) {
+        
+        
+        let url = URL(string: urlString)
+        kf.indicatorType = .activity
+        kf.setImage(with: url,
+                    placeholder: placeholder,
+                    options: [
+                        .scaleFactor(UIScreen.main.scale),
+                    ],
+                    progressBlock: { receivedSize, totalSize in
+                        progressHandler?(receivedSize, totalSize)
+                    },
+                    completionHandler: { result in
+                        switch result {
+                        case .success(_):
+                            onSuccess?()
+                        case .failure(let error):
+                            onFailure?(error)
+                        }
+                    })
     }
 }

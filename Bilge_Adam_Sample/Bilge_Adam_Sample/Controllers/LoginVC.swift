@@ -23,7 +23,7 @@ class LoginVC: UIViewController {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.layer.masksToBounds = true
-        iv.image = #imageLiteral(resourceName: "leaves")
+        
         return iv
     }()
     
@@ -112,7 +112,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        imgHeader.setImage(from: "https://wallpapercave.com/wp/wp5823275.jpg")
         setupViews()
         btnNext.centerTextAndImage(imageAboveText: true, spacing: 8)
         
