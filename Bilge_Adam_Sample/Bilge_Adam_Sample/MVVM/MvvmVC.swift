@@ -29,6 +29,8 @@ class MvvmVC: UIViewController {
         
         setupViews()
         setupVM()
+        
+        print("DetailVC branchindeyiz")
     }
     
     private func setupVM(){
