@@ -53,6 +53,11 @@ class MvvmVC: UIViewController {
     private func setupViews(){
         self.view.addSubview(tableView)
         setupLayout()
+        
+        print("git eklendi")
+        print("branch açıldı")
+        
+        print("Bir branch daha açılıdı: DetailVC")
     }
     
     

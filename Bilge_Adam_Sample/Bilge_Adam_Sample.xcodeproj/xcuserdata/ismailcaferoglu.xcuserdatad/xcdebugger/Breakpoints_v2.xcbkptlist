@@ -158,10 +158,57 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D6B652F-1CAE-4970-9487-6F45242D4C2E - eff80cf67462347d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "8D6B652F-1CAE-4970-9487-6F45242D4C2E - e4ed9e846562600"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.Int, Swift.Double) -&gt; () in Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "8D6B652F-1CAE-4970-9487-6F45242D4C2E - eff80cf67462347d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,28 +221,13 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - eff80cf674622f67"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
-                  moduleName = "Bilge_Adam_Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - e4ed9e846563d1a"
+                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - e4ed9e846562600"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -205,8 +237,38 @@
                   urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - eff80cf67462341c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "AD2463B8-AFC0-4901-A9EB-C03D7558E073 - e4ed9e846562623"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.Int, Swift.Double) -&gt; () in Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
                   offsetFromSymbolStart = "92">
                </Location>
             </Locations>
@@ -222,10 +284,42 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C7611FB5-7D66-4535-B327-F7247FEB084A - e4ed9e846562623"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.Int, Swift.Double) -&gt; () in Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "C7611FB5-7D66-4535-B327-F7247FEB084A - e4ed9e846562623"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.Int, Swift.Double) -&gt; () in Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,10 +348,42 @@
             filePath = "Bilge_Adam_Sample/Controllers/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "btnSignUpTapped()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12B3F872-64E9-4C1D-B706-18ADFFC056D8 - eff80cf674623590"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "12B3F872-64E9-4C1D-B706-18ADFFC056D8 - eff80cf6746234bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bilge_Adam_Sample.LoginVC.btnSignUpTapped() -&gt; ()"
+                  moduleName = "Bilge_Adam_Sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailcaferoglu/Desktop/TravelApp/Bilge_Adam_Sample/Bilge_Adam_Sample/Controllers/LoginVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

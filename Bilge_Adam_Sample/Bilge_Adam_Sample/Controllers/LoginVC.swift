@@ -19,6 +19,8 @@ class LoginVC: UIViewController {
     var username:String = "asd"
     var password:String = "123"
     
+    let dispatchGroup = DispatchGroup()
+    
     private lazy var imgHeader: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -112,12 +114,53 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imgHeader.setImage(from: "https://wallpapercave.com/wp/wp5823275.jpg")
+//        imgHeader.setImage(from: "https://wallpapercave.com/wp/wp5823275.jpg")
         setupViews()
-        btnNext.centerTextAndImage(imageAboveText: true, spacing: 8)
+//        btnNext.centerTextAndImage(imageAboveText: true, spacing: 8)
         
-    }
+       
+        
+        dispatchGroup.enter()
+    
+        print("İşlem başladı.count:background")
+        APIService().fetchPopularPhotos(complete: { success,object,error in
+            print("İşlem bitt.count:background")
+            self.dispatchGroup.leave()
+            print("İşlemden çıkıldı:background")
+        })
+        
+       
+        
+        dispatchGroup.enter()
+        print("İşlem başladı.count:utility")
+        APIService().fetchPopularPhoto(complete: { success,object,error in
+            print("İşlem bitt.count:utility")
+            
+             
+            self.dispatchGroup.leave()
+            print("İşlemden çıkıldı:utility")
+            
+        })
 
+        
+        
+        print("Tüm işlemlerin bitmesi bekleniyor")
+        dispatchGroup.notify(queue: .main) {
+            APIService().getPhoto(complete: { success,object,error in
+                
+                self.lblWelcome.text = object.first?.name
+                
+            })
+        }
+        
+      
+         
+    }
+    
+ 
+    override func viewDidAppear(_ animated: Bool) {
+        btnNext.roundCorners(corners: [.topLeft,.topRight,.bottomLeft], radius: 16)
+    }
     
     override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
@@ -126,7 +169,7 @@ class LoginVC: UIViewController {
 //        btnNext.layer.shadowOffset = CGSize(width: 0, height: 1)
 //        btnNext.layer.shadowOpacity = 1
         
-        btnNext.roundCorners(corners: [.topLeft,.topRight,.bottomLeft], radius: 16)
+        
         
     }
     
